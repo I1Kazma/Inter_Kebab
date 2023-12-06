@@ -1,0 +1,258 @@
+@charset "UTF-8";
+/*Цвета проекта*/
+/*Шрифт проекта*/
+/*Базовые стили проекта*/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.notification {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  border-radius: 22px;
+  background: #EF7F1B;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 3px 7px 3px 6px;
+  color: white;
+}
+
+.max-width-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.max-width-wrapper .width-wrapper {
+  max-width: 1440px;
+  display: flex;
+  width: 100%;
+}
+
+/*Цвета проекта*/
+/*Шрифт проекта*/
+/*Базовые стили проекта*/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.notification {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  border-radius: 22px;
+  background: #EF7F1B;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 3px 7px 3px 6px;
+  color: white;
+}
+
+.max-width-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.max-width-wrapper .width-wrapper {
+  max-width: 1440px;
+  display: flex;
+  width: 100%;
+}
+
+.header .header-top {
+  background: black;
+  width: 100%;
+  display: Flex;
+  padding-top: 14px;
+}
+.header .header-top .header__top__layout {
+  margin: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  max-height: 66px;
+  width: 100%;
+}
+.header .header-top .header__layout__top__links {
+  display: flex;
+  gap: 20px;
+}
+.header .header-top .header__layout__top__links .header__layout__top__link.menu a {
+  background: white;
+  color: black;
+  gap: 10px;
+  padding: 18px 28px 18px 24px;
+  border-radius: 10px 10px 0px 0px;
+}
+.header .header-top .header__layout__top__links .header__layout__top__link {
+  display: Flex;
+}
+.header .header-top .header__layout__top__links .header__layout__top__link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 130%;
+  transition: 0.3s ease;
+}
+.header .header-top .header__layout__top__links .header__layout__top__link a:hover {
+  color: #f29848;
+}
+.header .header-top .header__layout__top__links .header__layout__top__link a path {
+  transition: 0.3s ease;
+}
+.header .header-top .header__layout__top__links .header__layout__top__link a:hover path {
+  stroke: #f29848;
+}
+.header .header-top .header__logo {
+  position: relative;
+  top: 6px;
+  width: 128px;
+  height: 106px;
+}
+.header .header-top .header__layout__top__right {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 16px;
+}
+.header .header-top .header__layout__top__right .header__layout__top__search {
+  display: flex;
+  width: 296px;
+}
+.header .header-top .header__layout__top__right .header__layout__top__search input {
+  border-radius: 10px 0px 0px 10px;
+  border: 2px solid #383838;
+  background: #24282D;
+  padding: 10px;
+  outline: none;
+  transition: 0.3s ease;
+  color: white;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 130%;
+}
+.header .header-top .header__layout__top__right .header__layout__top__search input:focus {
+  background: #323232;
+}
+.header .header-top .header__layout__top__right .header__layout__top__search button {
+  transition: 0.3s ease;
+  border-radius: 0px 10px 10px 0px;
+  background: #383838;
+  padding: 12px 20px;
+}
+.header .header-top .header__layout__top__right .header__layout__top__auth .header__layout__top__auth__btn {
+  border-radius: 10px;
+  padding: 12px 24px 12px 20px;
+  display: flex;
+  gap: 6px;
+  background: #383838;
+  transition: 0.3s ease;
+  height: 100%;
+  align-items: center;
+}
+.header .header-top .header__layout__top__right .header__layout__top__auth .header__layout__top__auth__btn:hover {
+  background: #323232;
+}
+.header .header-top .header__layout__top__right .header__layout__top__auth .header__layout__top__auth__btn span {
+  color: white;
+}
+.header .header-top .header__layout__top__right .header__layout__top__busket {
+  position: relative;
+}
+.header .header-top .header__layout__top__right .header__layout__top__busket .header__layout__top__busket__wrapper {
+  padding: 12px 24px 12px 20px;
+  border-radius: 10px;
+  height: 100%;
+  background: #383838;
+  display: flex;
+  transition: 0.3s ease;
+}
+.header .header-top .header__layout__top__right .header__layout__top__busket .header__layout__top__busket__wrapper:hover {
+  background: #323232;
+}
+.header .header-bottom {
+  padding-top: 18px;
+}
+.header .header-bottom .header__bottom__layout {
+  margin: 0px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.header .header-bottom .header__bottom__layout .header__bottom__layout__left {
+  display: Flex;
+  gap: 30px;
+  align-items: Center;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 130%;
+}
+.header .header-bottom .header__bottom__layout .header__bottom__layout__left .header__bottom__layout__location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.header .header-bottom .header__bottom__layout .header__bottom__layout__right {
+  display: flex;
+  gap: 10px;
+}
+.header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__phone a {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  transition: 0.3s ease;
+  color: black;
+}
+.header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__phone:hover a {
+  color: #f29848;
+}
+.header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__whatsapp rect, .header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__vk rect {
+  transition: 0.3s ease;
+}
+.header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__whatsapp:hover rect {
+  fill: #6cd37e;
+}
+.header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__vk:hover rect {
+  fill: #3292ff;
+}/*# sourceMappingURL=main.css.map */

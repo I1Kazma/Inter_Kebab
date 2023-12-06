@@ -1,0 +1,52 @@
+@import '../utils/utils'
+/*Цвета проекта*/
+
+$black: #24282D
+$orange: #EF7F1B
+$orange-hover: #f29848
+$green: #98CE52
+$green-hover: #B6DC85
+
+$white: white
+
+/*Шрифт проекта*/
+$font: 'Exo 2', sans-serif
+
+/*Базовые стили проекта*/
+
+*
+    padding: 0px
+    margin: 0px
+    box-sizing: border-box
+    font-family: $font
+
+a
+    text-decoration: none
+
+ul, ol
+    list-style-type: none
+
+button
+    border: none
+    background: transparent
+    cursor: pointer
+
+.notification
+    position: absolute
+    top: -10px
+    right: -5px
+    border-radius: 22px
+    background: $orange
+    font-size: 15px
+    font-weight: 700
+    padding: 3px 7px 3px 6px
+    color: white
+
+.max-width-wrapper
+    width: 100%
+    @include flex-center
+
+    .width-wrapper
+        max-width: 1440px
+        display: flex
+        width: 100%

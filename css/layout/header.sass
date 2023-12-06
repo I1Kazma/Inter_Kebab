@@ -1,0 +1,172 @@
+@import '../utils/utils'
+@import '../base/style'
+.header
+
+    .header-top
+        background: black
+        width: 100%
+        display: Flex
+        padding-top: 14px
+
+        .header__top__layout
+            margin: 0px 20px
+            display: flex
+            justify-content: space-between
+            max-height: 66px
+            width: 100%
+
+        .header__layout__top__links
+            display: flex
+            gap: 20px
+
+            .header__layout__top__link.menu
+                a
+                    background: white
+                    color: black
+                    gap: 10px
+                    padding: 18px 28px 18px 24px
+                    border-radius: 10px 10px 0px 0px
+
+            .header__layout__top__link
+                display: Flex
+
+                a
+
+                    @include flex-center
+                    color: white
+                    text-transform: uppercase
+
+                    font-size: 17px
+                    font-weight: 600
+                    line-height: 130%
+                    transition: 0.3s ease
+
+                    &:hover
+                        color: $orange-hover
+
+                    path
+                        transition: 0.3s ease
+
+                    &:hover path
+                        stroke: $orange-hover
+
+        .header__logo
+            position: relative
+            top: 6px
+            width: 128px
+            height: 106px
+
+        .header__layout__top__right
+            display: flex
+            justify-content: space-between
+            gap: 10px
+            padding-bottom: 16px
+
+            .header__layout__top__search
+                display: flex
+                width: 296px
+
+                input
+                    border-radius: 10px 0px 0px 10px
+                    border: 2px solid #383838
+                    background: $black
+                    padding: 10px
+                    outline: none
+                    transition: 0.3s ease
+                    color: white
+                    width: 100%
+
+                    font-size: 17px
+                    font-weight: 400
+                    line-height: 130%
+
+                    &:focus
+                        background: #323232
+
+                button
+                    transition: 0.3s ease
+                    border-radius: 0px 10px 10px 0px
+                    background: #383838
+                    padding: 12px 20px
+
+            .header__layout__top__auth
+
+                .header__layout__top__auth__btn
+                    border-radius: 10px
+                    padding: 12px 24px 12px 20px
+                    display: flex
+                    gap: 6px
+                    background: #383838
+                    transition: 0.3s ease
+                    height: 100%
+                    align-items: center
+
+                    &:hover
+                        background: #323232
+
+                    span
+                        color: white
+
+            .header__layout__top__busket
+                position: relative
+
+                .header__layout__top__busket__wrapper
+                    padding: 12px 24px 12px 20px
+                    border-radius: 10px
+                    height: 100%
+                    background: #383838
+                    display: flex
+                    transition: 0.3s ease
+
+                    &:hover
+                        background: #323232
+
+    .header-bottom
+        padding-top: 18px
+
+        .header__bottom__layout
+            margin: 0px 20px
+            display: flex
+            width: 100%
+            justify-content: space-between
+
+            .header__bottom__layout__left
+                display: Flex
+                gap: 30px
+                align-items: Center
+
+                font-size: 17px
+                font-weight: 400
+                line-height: 130%
+
+                .header__bottom__layout__location
+                    display: flex
+                    align-items: center
+                    gap: 6px
+
+            .header__bottom__layout__right
+                display: flex
+                gap: 10px
+
+                .header__bottom__layout__phone
+
+                    a
+                        font-size: 24px
+                        font-style: normal
+                        font-weight: 600
+                        line-height: 130%
+                        transition: 0.3s ease
+                        color: black
+
+                    &:hover a
+                        color: $orange-hover
+
+                .header__bottom__layout__whatsapp, .header__bottom__layout__vk
+                    rect
+                        transition: 0.3s ease
+
+                .header__bottom__layout__whatsapp:hover rect
+                    fill: #6cd37e
+
+                .header__bottom__layout__vk:hover rect
+                    fill: #3292ff
