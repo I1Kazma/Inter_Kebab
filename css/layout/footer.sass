@@ -1,0 +1,81 @@
+@import '../utils/utils'
+@import '../base/style'
+
+.footer
+    background: #242424
+
+    .footer__layout
+        display: flex
+        width: 100%
+        flex-direction: column
+        position: relative
+        padding: 49px 0px 40px
+        margin: 0px 20px
+        align-items: center
+
+        .footer__layout__logo
+            position: absolute
+            top: -60px
+
+        .footer__layout__info
+            display: flex
+            justify-content: space-between
+            width: 100%
+            padding-bottom: 35px
+
+            ul
+                display: flex
+                gap: 20px
+
+                a
+                    font-size: 20px
+                    color: white
+                    font-weight: 600
+                    line-height: 130%
+                    text-transform: uppercase
+
+            .footer__layout__social
+                display: flex
+                gap: 10px
+                align-items: center
+
+                .footer__layout__right__phone
+                    a
+                        color: white
+                        font-size: 24px
+                        font-weight: 600
+                        line-height: 130%
+
+        .footer__layout__menu
+            padding: 20px 10px
+            border-top: 1px solid #AAA
+            width: 100%
+            border-bottom: 1px solid #AAA
+            ul
+                display: flex
+                gap: 40px
+                justify-content: center
+
+                li
+
+                    a
+                        font-size: 17px
+                        font-style: normal
+                        font-weight: 600
+                        color: #FFF
+                        text-transform: uppercase
+
+        .footer__layout__copyright
+            display: flex
+            justify-content: space-between
+            width: 100%
+            padding-top: 30px
+
+            span, a
+                color: white
+
+            a
+                text-decoration: underline
+
+            a:hover
+                color: $orange-hover

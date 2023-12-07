@@ -11,6 +11,10 @@
 
 a {
   text-decoration: none;
+  transition: 0.3s ease;
+}
+a:hover {
+  color: #f29848 !important;
 }
 
 ul, ol {

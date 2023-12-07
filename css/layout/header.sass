@@ -2,6 +2,62 @@
 @import '../base/style'
 .header
 
+    .header__mobile-open
+        left: 0px !important
+
+    .header__mobile
+        display: none
+
+        @include desktop-small
+            display: flex
+            flex-direction: column
+            position: absolute
+            background: $white
+            left: -1000px
+            width: 100%
+            height: 100%
+            z-index: 5
+            transition: 0.3s ease
+
+        .header__mobile__close
+            width: 48px
+            height: 48px
+            margin-bottom: 20px
+            cursor: pointer
+
+            path
+                transition: 0.3s ease
+
+            &:hover path
+                fill: $orange-hover
+
+        ul
+            width: 100%
+            height: 100%
+            padding: 20px 30px
+
+            .header__mobile__wrapper__link
+                border-top: 1px solid grey
+                border-bottom: 1px solid grey
+                display: flex
+                margin-top: -1px
+
+                &:hover a
+                    color: $orange-hover
+
+                a
+                    padding: 20px 20px
+                    color: $black
+                    transition: 0.3s ease
+                    font-size: 17px
+                    text-transform: uppercase
+                    font-weight: 600
+                    line-height: 130%
+
+            .header__mobile__social-links
+                display: flex
+                gap: 10px
+                padding: 20px 20px
     .header-top
         background: black
         width: 100%
@@ -14,10 +70,46 @@
             justify-content: space-between
             max-height: 66px
             width: 100%
+            position: relative
 
         .header__layout__top__links
             display: flex
             gap: 20px
+
+            @include desktop-small
+                gap: 10px
+                width: 100%
+                max-width: 270px
+
+            .hamburger
+                display: none !important
+                &:hover a
+                    background: #323232
+
+                @include desktop-small
+                    display: flex !important
+
+                a
+                    transition: 0.3s ease
+                    @include desktop-small
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        padding: 12px 20px
+                        background: #383838
+                        border-radius: 10px
+                        height: 48px
+
+                    @include mobile-big
+                        padding: 12px 10px
+
+            .link
+                @include desktop-small
+                    display: none !important
+
+            .menu__hamburger
+                @include desktop-small
+                    display: none
 
             .header__layout__top__link.menu
                 a
@@ -26,6 +118,15 @@
                     gap: 10px
                     padding: 18px 28px 18px 24px
                     border-radius: 10px 10px 0px 0px
+
+                    @include desktop-small
+                        padding: 15px 24px
+                        border-radius: 10px
+                        height: 48px
+
+                    span
+                        @include mobile-big
+                            font-size: 15px
 
             .header__layout__top__link
                 display: Flex
@@ -56,6 +157,17 @@
             width: 128px
             height: 106px
 
+            @include desktop-small
+                width: 110px
+                height: 92px
+
+            @include tablet
+                width: 108.87px
+                height: 93.246px
+
+            @media (max-width: 700px)
+                display: None
+
         .header__layout__top__right
             display: flex
             justify-content: space-between
@@ -66,28 +178,57 @@
                 display: flex
                 width: 296px
 
-                input
-                    border-radius: 10px 0px 0px 10px
-                    border: 2px solid #383838
-                    background: $black
-                    padding: 10px
-                    outline: none
-                    transition: 0.3s ease
-                    color: white
+                @media (max-width: 1275px)
                     width: 100%
 
-                    font-size: 17px
-                    font-weight: 400
-                    line-height: 130%
+                @include desktop-small
+                    &:hover input
+                        top: 48px
+                        max-height: 50px
+                        overflow: visible
+                        padding-top: 50px
 
-                    &:focus
-                        background: #323232
+                .header__layout__top__search__wrapper
+
+                    @include desktop-small
+                        display: none
+
+                    input
+                        border-radius: 10px 0px 0px 10px
+                        border: 2px solid #383838
+                        background: $black
+                        padding: 10px
+                        outline: none
+                        transition: 0.3s ease
+                        color: white
+                        width: 100%
+                        height: 100%
+
+                        font-size: 17px
+                        font-weight: 400
+                        line-height: 130%
+
+                        &:focus
+                            background: #323232
+
+                        @include desktop-small
+                            position: absolute
+                            border-radius: 10px 10px 10px 10px
+                            left: 0
+                            max-height: 0px
+                            overflow: hidden
 
                 button
                     transition: 0.3s ease
                     border-radius: 0px 10px 10px 0px
                     background: #383838
                     padding: 12px 20px
+
+                    @include desktop-small
+                        border-radius: 10px 10px 10px 10px
+
+                    @include mobile-big
+                        padding: 12px
 
             .header__layout__top__auth
 
@@ -104,8 +245,17 @@
                     &:hover
                         background: #323232
 
+                    @include tablet
+                        padding: 12px 20px
+
+                    @include mobile-big
+                        padding: 12px 10px
+
                     span
                         color: white
+
+                        @include tablet
+                            display: none
 
             .header__layout__top__busket
                 position: relative
@@ -120,6 +270,9 @@
 
                     &:hover
                         background: #323232
+
+                    @include mobile-big
+                        padding: 12px 10px
 
     .header-bottom
         padding-top: 18px
@@ -139,14 +292,51 @@
                 font-weight: 400
                 line-height: 130%
 
+                @media (max-width: 700px)
+                    gap: 14px
+
                 .header__bottom__layout__location
                     display: flex
                     align-items: center
                     gap: 6px
 
+                    span
+                        @media (max-width: 700px)
+                            display: none
+
+                    .location
+                        @media (max-width: 700px)
+
+                            display: none
+
+                    .location-logo
+                        display: none
+                        @media (max-width: 700px)
+                            display: flex
+                            width: 45px
+                            height: 38px
+
+                .header__bottom__layout__time
+                    display: flex
+                    flex-direction: column
+
+                    h3
+                        display: none
+                        @media (max-width: 700px)
+                            display: flex
+                            font-size: 15px
+                            font-weight: 400
+
+                    span
+                        @media (max-width: 700px)
+                            font-size: 10px
+                            font-style: normal
+                            font-weight: 400
+
             .header__bottom__layout__right
                 display: flex
                 gap: 10px
+                align-items: center
 
                 .header__bottom__layout__phone
 
@@ -158,12 +348,23 @@
                         transition: 0.3s ease
                         color: black
 
+                        @include tablet
+                            font-size: 20px
+
+                        @include mobile-big
+                            font-size: 15px
+
                     &:hover a
                         color: $orange-hover
 
                 .header__bottom__layout__whatsapp, .header__bottom__layout__vk
                     rect
                         transition: 0.3s ease
+
+                .header__bottom__layout__whatsapp,
+                .header__bottom__layout__vk
+                    @media (max-width: 420px)
+                        display: none
 
                 .header__bottom__layout__whatsapp:hover rect
                     fill: #6cd37e

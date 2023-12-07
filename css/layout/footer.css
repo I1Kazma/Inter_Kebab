@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/*Цвета проекта*/
+/*Шрифт проекта*/
+/*Базовые стили проекта*/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+a:hover {
+  color: #f29848 !important;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.notification {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  border-radius: 22px;
+  background: #EF7F1B;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 3px 7px 3px 6px;
+  color: white;
+}
+
+.max-width-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.max-width-wrapper .width-wrapper {
+  max-width: 1440px;
+  display: flex;
+  width: 100%;
+}
+
+.footer {
+  background: #242424;
+}
+.footer .footer__layout {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  padding: 49px 0px 40px;
+  margin: 0px 20px;
+  align-items: center;
+}
+.footer .footer__layout .footer__layout__logo {
+  position: absolute;
+  top: -60px;
+}
+.footer .footer__layout .footer__layout__info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 35px;
+}
+.footer .footer__layout .footer__layout__info ul {
+  display: flex;
+  gap: 20px;
+}
+.footer .footer__layout .footer__layout__info ul a {
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+.footer .footer__layout .footer__layout__info .footer__layout__social {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer .footer__layout .footer__layout__info .footer__layout__social .footer__layout__right__phone a {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+}
+.footer .footer__layout .footer__layout__menu {
+  padding: 20px 10px;
+  border-top: 1px solid #AAA;
+  width: 100%;
+  border-bottom: 1px solid #AAA;
+}
+.footer .footer__layout .footer__layout__menu ul {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+.footer .footer__layout .footer__layout__menu ul li a {
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  color: #FFF;
+  text-transform: uppercase;
+}
+.footer .footer__layout .footer__layout__copyright {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 30px;
+}
+.footer .footer__layout .footer__layout__copyright span, .footer .footer__layout .footer__layout__copyright a {
+  color: white;
+}
+.footer .footer__layout .footer__layout__copyright a {
+  text-decoration: underline;
+}
+.footer .footer__layout .footer__layout__copyright a:hover {
+  color: #f29848;
+}/*# sourceMappingURL=footer.css.map */
