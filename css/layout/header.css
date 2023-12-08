@@ -39,6 +39,18 @@ button {
   color: white;
 }
 
+.whatsapp rect, .vk rect {
+  transition: 0.3s ease;
+}
+
+.whatsapp:hover rect {
+  fill: #6cd37e;
+}
+
+.vk:hover rect {
+  fill: #3292ff;
+}
+
 .max-width-wrapper {
   width: 100%;
   display: flex;
@@ -86,6 +98,11 @@ button {
   width: 100%;
   height: 100%;
   padding: 20px 30px;
+}
+@media (max-width: 768px) {
+  .header .header__mobile ul {
+    padding: 20px 20px;
+  }
 }
 .header .header__mobile ul .header__mobile__wrapper__link {
   border-top: 1px solid grey;
@@ -454,18 +471,18 @@ button {
 .header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__phone:hover a {
   color: #f29848;
 }
-.header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__whatsapp rect, .header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__vk rect {
+.header .header-bottom .header__bottom__layout .header__bottom__layout__right .whatsapp rect, .header .header-bottom .header__bottom__layout .header__bottom__layout__right .vk rect {
   transition: 0.3s ease;
 }
 @media (max-width: 420px) {
-  .header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__whatsapp,
-  .header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__vk {
+  .header .header-bottom .header__bottom__layout .header__bottom__layout__right .whatsapp,
+  .header .header-bottom .header__bottom__layout .header__bottom__layout__right .vk {
     display: none;
   }
 }
-.header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__whatsapp:hover rect {
+.header .header-bottom .header__bottom__layout .header__bottom__layout__right .whatsapp:hover rect {
   fill: #6cd37e;
 }
-.header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__vk:hover rect {
+.header .header-bottom .header__bottom__layout .header__bottom__layout__right .vk:hover rect {
   fill: #3292ff;
 }/*# sourceMappingURL=header.css.map */

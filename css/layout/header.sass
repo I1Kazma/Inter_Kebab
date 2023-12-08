@@ -36,6 +36,9 @@
             height: 100%
             padding: 20px 30px
 
+            @include tablet
+                padding: 20px 20px
+
             .header__mobile__wrapper__link
                 border-top: 1px solid grey
                 border-bottom: 1px solid grey
@@ -357,17 +360,17 @@
                     &:hover a
                         color: $orange-hover
 
-                .header__bottom__layout__whatsapp, .header__bottom__layout__vk
+                .whatsapp, .vk
                     rect
                         transition: 0.3s ease
 
-                .header__bottom__layout__whatsapp,
-                .header__bottom__layout__vk
+                .whatsapp,
+                .vk
                     @media (max-width: 420px)
                         display: none
 
-                .header__bottom__layout__whatsapp:hover rect
+                .whatsapp:hover rect
                     fill: #6cd37e
 
-                .header__bottom__layout__vk:hover rect
+                .vk:hover rect
                     fill: #3292ff

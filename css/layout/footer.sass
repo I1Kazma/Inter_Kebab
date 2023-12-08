@@ -17,6 +17,10 @@
             position: absolute
             top: -60px
 
+            @include desktop-small
+                width: 110px
+                height: 92px
+
         .footer__layout__info
             display: flex
             justify-content: space-between
@@ -27,6 +31,13 @@
                 display: flex
                 gap: 20px
 
+                @include desktop-small
+                    max-width: 312px
+                    flex-wrap: wrap
+
+                @media (max-width: 580px)
+                    flex-direction: column
+
                 a
                     font-size: 20px
                     color: white
@@ -34,10 +45,17 @@
                     line-height: 130%
                     text-transform: uppercase
 
+                    @include desktop-small
+                        font-size: 15px
+
             .footer__layout__social
                 display: flex
                 gap: 10px
                 align-items: center
+
+                @include desktop-small
+                    flex-direction: column
+                    align-items: flex-end
 
                 .footer__layout__right__phone
                     a
@@ -45,6 +63,13 @@
                         font-size: 24px
                         font-weight: 600
                         line-height: 130%
+
+                        @include mobile-big
+                            font-size: 17px
+
+                .social-links
+                    display: flex
+                    gap: 10px
 
         .footer__layout__menu
             padding: 20px 10px
@@ -55,6 +80,10 @@
                 display: flex
                 gap: 40px
                 justify-content: center
+                flex-wrap: wrap
+
+                @include desktop-small
+                    gap: 20px
 
                 li
 
@@ -65,14 +94,25 @@
                         color: #FFF
                         text-transform: uppercase
 
+                        @include desktop-small
+                            font-size: 15px
+
         .footer__layout__copyright
             display: flex
             justify-content: space-between
             width: 100%
             padding-top: 30px
 
+            @include mobile-big
+                flex-direction: column-reverse
+                gap: 20px
+
             span, a
                 color: white
+
+            span
+                @include mobile-big
+                    text-align: center
 
             a
                 text-decoration: underline

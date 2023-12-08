@@ -39,6 +39,18 @@ button {
   color: white;
 }
 
+.whatsapp rect, .vk rect {
+  transition: 0.3s ease;
+}
+
+.whatsapp:hover rect {
+  fill: #6cd37e;
+}
+
+.vk:hover rect {
+  fill: #3292ff;
+}
+
 .max-width-wrapper {
   width: 100%;
   display: flex;
@@ -454,19 +466,19 @@ button {
 .header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__phone:hover a {
   color: #f29848;
 }
-.header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__whatsapp rect, .header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__vk rect {
+.header .header-bottom .header__bottom__layout .header__bottom__layout__right .whatsapp rect, .header .header-bottom .header__bottom__layout .header__bottom__layout__right .vk rect {
   transition: 0.3s ease;
 }
 @media (max-width: 420px) {
-  .header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__whatsapp,
-  .header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__vk {
+  .header .header-bottom .header__bottom__layout .header__bottom__layout__right .whatsapp,
+  .header .header-bottom .header__bottom__layout .header__bottom__layout__right .vk {
     display: none;
   }
 }
-.header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__whatsapp:hover rect {
+.header .header-bottom .header__bottom__layout .header__bottom__layout__right .whatsapp:hover rect {
   fill: #6cd37e;
 }
-.header .header-bottom .header__bottom__layout .header__bottom__layout__right .header__bottom__layout__vk:hover rect {
+.header .header-bottom .header__bottom__layout .header__bottom__layout__right .vk:hover rect {
   fill: #3292ff;
 }
 
@@ -510,6 +522,18 @@ button {
   color: white;
 }
 
+.whatsapp rect, .vk rect {
+  transition: 0.3s ease;
+}
+
+.whatsapp:hover rect {
+  fill: #6cd37e;
+}
+
+.vk:hover rect {
+  fill: #3292ff;
+}
+
 .max-width-wrapper {
   width: 100%;
   display: flex;
@@ -538,6 +562,12 @@ button {
   position: absolute;
   top: -60px;
 }
+@media (max-width: 1000px) {
+  .footer .footer__layout .footer__layout__logo {
+    width: 110px;
+    height: 92px;
+  }
+}
 .footer .footer__layout .footer__layout__info {
   display: flex;
   justify-content: space-between;
@@ -548,6 +578,17 @@ button {
   display: flex;
   gap: 20px;
 }
+@media (max-width: 1000px) {
+  .footer .footer__layout .footer__layout__info ul {
+    max-width: 312px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 580px) {
+  .footer .footer__layout .footer__layout__info ul {
+    flex-direction: column;
+  }
+}
 .footer .footer__layout .footer__layout__info ul a {
   font-size: 20px;
   color: white;
@@ -555,16 +596,36 @@ button {
   line-height: 130%;
   text-transform: uppercase;
 }
+@media (max-width: 1000px) {
+  .footer .footer__layout .footer__layout__info ul a {
+    font-size: 15px;
+  }
+}
 .footer .footer__layout .footer__layout__info .footer__layout__social {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+@media (max-width: 1000px) {
+  .footer .footer__layout .footer__layout__info .footer__layout__social {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }
 .footer .footer__layout .footer__layout__info .footer__layout__social .footer__layout__right__phone a {
   color: white;
   font-size: 24px;
   font-weight: 600;
   line-height: 130%;
+}
+@media (max-width: 480px) {
+  .footer .footer__layout .footer__layout__info .footer__layout__social .footer__layout__right__phone a {
+    font-size: 17px;
+  }
+}
+.footer .footer__layout .footer__layout__info .footer__layout__social .social-links {
+  display: flex;
+  gap: 10px;
 }
 .footer .footer__layout .footer__layout__menu {
   padding: 20px 10px;
@@ -576,6 +637,12 @@ button {
   display: flex;
   gap: 40px;
   justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 1000px) {
+  .footer .footer__layout .footer__layout__menu ul {
+    gap: 20px;
+  }
 }
 .footer .footer__layout .footer__layout__menu ul li a {
   font-size: 17px;
@@ -584,14 +651,30 @@ button {
   color: #FFF;
   text-transform: uppercase;
 }
+@media (max-width: 1000px) {
+  .footer .footer__layout .footer__layout__menu ul li a {
+    font-size: 15px;
+  }
+}
 .footer .footer__layout .footer__layout__copyright {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding-top: 30px;
 }
+@media (max-width: 480px) {
+  .footer .footer__layout .footer__layout__copyright {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+}
 .footer .footer__layout .footer__layout__copyright span, .footer .footer__layout .footer__layout__copyright a {
   color: white;
+}
+@media (max-width: 480px) {
+  .footer .footer__layout .footer__layout__copyright span {
+    text-align: center;
+  }
 }
 .footer .footer__layout .footer__layout__copyright a {
   text-decoration: underline;
