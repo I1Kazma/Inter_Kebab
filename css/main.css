@@ -51,6 +51,46 @@ button {
   fill: #3292ff;
 }
 
+.nav--opened {
+  overflow-y: hidden;
+}
+
+.swiper-slide {
+  border-radius: 20px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  height: 70px;
+  width: 71px;
+  color: black;
+  border-radius: 100px;
+  background: white;
+  padding: 20px;
+  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.05));
+  transition: 0.3s ease;
+}
+@media (max-width: 1000px) {
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  background: #f29848;
+  color: white;
+}
+
+.swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, -15px);
+}
+
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, -15px);
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 30px;
+}
+
 .max-width-wrapper {
   width: 100%;
   display: flex;
@@ -98,6 +138,11 @@ button {
   width: 100%;
   height: 100%;
   padding: 20px 30px;
+}
+@media (max-width: 768px) {
+  .header .header__mobile ul {
+    padding: 20px 20px;
+  }
 }
 .header .header__mobile ul .header__mobile__wrapper__link {
   border-top: 1px solid grey;
@@ -374,6 +419,8 @@ button {
 }
 .header .header-bottom {
   padding-top: 18px;
+  padding-bottom: 30px;
+  background: #FAFAFA;
 }
 .header .header-bottom .header__bottom__layout {
   margin: 0px 20px;
@@ -534,6 +581,46 @@ button {
   fill: #3292ff;
 }
 
+.nav--opened {
+  overflow-y: hidden;
+}
+
+.swiper-slide {
+  border-radius: 20px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  height: 70px;
+  width: 71px;
+  color: black;
+  border-radius: 100px;
+  background: white;
+  padding: 20px;
+  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.05));
+  transition: 0.3s ease;
+}
+@media (max-width: 1000px) {
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  background: #f29848;
+  color: white;
+}
+
+.swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, -15px);
+}
+
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, -15px);
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 30px;
+}
+
 .max-width-wrapper {
   width: 100%;
   display: flex;
@@ -683,6 +770,413 @@ button {
   color: #f29848;
 }
 
+/*Цвета проекта*/
+/*Шрифт проекта*/
+/*Базовые стили проекта*/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+a:hover {
+  color: #f29848 !important;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.notification {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  border-radius: 22px;
+  background: #EF7F1B;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 3px 7px 3px 6px;
+  color: white;
+}
+
+.whatsapp rect, .vk rect {
+  transition: 0.3s ease;
+}
+
+.whatsapp:hover rect {
+  fill: #6cd37e;
+}
+
+.vk:hover rect {
+  fill: #3292ff;
+}
+
+.nav--opened {
+  overflow-y: hidden;
+}
+
+.swiper-slide {
+  border-radius: 20px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  height: 70px;
+  width: 71px;
+  color: black;
+  border-radius: 100px;
+  background: white;
+  padding: 20px;
+  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.05));
+  transition: 0.3s ease;
+}
+@media (max-width: 1000px) {
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  background: #f29848;
+  color: white;
+}
+
+.swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, -15px);
+}
+
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, -15px);
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 30px;
+}
+
+.max-width-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.max-width-wrapper .width-wrapper {
+  max-width: 1440px;
+  display: flex;
+  width: 100%;
+}
+
+/*Цвета проекта*/
+/*Шрифт проекта*/
+/*Базовые стили проекта*/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+a:hover {
+  color: #f29848 !important;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.notification {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  border-radius: 22px;
+  background: #EF7F1B;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 3px 7px 3px 6px;
+  color: white;
+}
+
+.whatsapp rect, .vk rect {
+  transition: 0.3s ease;
+}
+
+.whatsapp:hover rect {
+  fill: #6cd37e;
+}
+
+.vk:hover rect {
+  fill: #3292ff;
+}
+
+.nav--opened {
+  overflow-y: hidden;
+}
+
+.swiper-slide {
+  border-radius: 20px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  height: 70px;
+  width: 71px;
+  color: black;
+  border-radius: 100px;
+  background: white;
+  padding: 20px;
+  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.05));
+  transition: 0.3s ease;
+}
+@media (max-width: 1000px) {
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  background: #f29848;
+  color: white;
+}
+
+.swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, -15px);
+}
+
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, -15px);
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 30px;
+}
+
+.max-width-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.max-width-wrapper .width-wrapper {
+  max-width: 1440px;
+  display: flex;
+  width: 100%;
+}
+
+/*Цвета проекта*/
+/*Шрифт проекта*/
+/*Базовые стили проекта*/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+a:hover {
+  color: #f29848 !important;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.notification {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  border-radius: 22px;
+  background: #EF7F1B;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 3px 7px 3px 6px;
+  color: white;
+}
+
+.whatsapp rect, .vk rect {
+  transition: 0.3s ease;
+}
+
+.whatsapp:hover rect {
+  fill: #6cd37e;
+}
+
+.vk:hover rect {
+  fill: #3292ff;
+}
+
+.nav--opened {
+  overflow-y: hidden;
+}
+
+.swiper-slide {
+  border-radius: 20px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  height: 70px;
+  width: 71px;
+  color: black;
+  border-radius: 100px;
+  background: white;
+  padding: 20px;
+  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.05));
+  transition: 0.3s ease;
+}
+@media (max-width: 1000px) {
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  background: #f29848;
+  color: white;
+}
+
+.swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, -15px);
+}
+
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, -15px);
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 30px;
+}
+
+.max-width-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.max-width-wrapper .width-wrapper {
+  max-width: 1440px;
+  display: flex;
+  width: 100%;
+}
+
+.top-banners__layout {
+  overflow: hidden;
+  margin: 0px 20px;
+}
+.top-banners__layout .top-banner__swiper .swiper-slide {
+  background: url("../img/banners_bg.svg");
+  color: white;
+  min-height: 360px;
+}
+.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food {
+  padding: 40px 0px 28px 50px;
+  position: relative;
+}
+.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  max-width: 300px;
+  position: relative;
+  z-index: 2;
+}
+.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content h3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content h3 span {
+  text-align: center;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.63px;
+  text-transform: uppercase;
+}
+.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-height: 152px;
+}
+.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__info__ingredients {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__info__ingredients span {
+  font-size: 14px;
+  max-width: 133px;
+}
+.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__btns {
+  display: flex;
+  gap: 20px;
+}
+.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__btns__more {
+  color: white;
+  border: 2px solid white;
+  border-radius: 60px;
+  padding: 10px 28px;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__btns__more:hover {
+  border: 2px solid #f29848;
+}
+.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__btns__price {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 130%;
+}
+.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__img {
+  position: absolute;
+  right: 0;
+  top: 40px;
+}
+.top-banners__layout .top-banner__swiper .swiper-pagination {
+  display: none;
+}
+@media (max-width: 768px) {
+  .top-banners__layout .top-banner__swiper .swiper-pagination {
+    display: flex;
+  }
+}
+
+.width-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 main {
   height: 850px;
+  background: #FAFAFA;
 }/*# sourceMappingURL=main.css.map */

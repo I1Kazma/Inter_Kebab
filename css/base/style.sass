@@ -56,6 +56,38 @@ button
 .vk:hover rect
     fill: #3292ff
 
+.nav--opened
+    overflow-y: hidden
+
+.swiper-slide
+    border-radius: 20px
+
+.swiper-button-prev, .swiper-button-next
+    height: 70px
+    width: 71px
+    color: black
+    border-radius: 100px
+    background: white
+    padding: 20px
+    filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.05))
+    transition: 0.3s ease
+
+    @include desktop-small
+        display: none
+
+    &:hover
+        background: $orange-hover
+        color: white
+
+.swiper-button-prev
+    left: var(--swiper-navigation-sides-offset, -15px)
+
+.swiper-button-next
+    right: var(--swiper-navigation-sides-offset,-15px)
+
+.swiper-button-prev::after, .swiper-button-next::after
+    font-size: 30px
+
 .max-width-wrapper
     width: 100%
     @include flex-center

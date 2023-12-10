@@ -1,0 +1,88 @@
+@import '../utils/utils'
+@import '../base/style'
+.top-banners__layout
+    overflow: hidden
+    margin: 0px 20px
+
+    .top-banner__swiper
+
+        .swiper-slide
+            background: url('../img/banners_bg.svg')
+            color: white
+            min-height: 360px
+
+            .top-banners__food
+                padding: 40px 0px 28px 50px
+                position: relative
+
+                &__content
+                    display: flex
+                    flex-direction: column
+                    gap: 26px
+                    max-width: 300px
+                    position: relative
+                    z-index: 2
+
+                    h3
+                        display: flex
+                        flex-direction: column
+                        gap: 10px
+
+                        span
+                            text-align: center
+                            font-size: 21px
+                            font-weight: 600
+                            line-height: 130%
+                            letter-spacing: 0.63px
+                            text-transform: uppercase
+
+                    &__info
+                        display: flex
+                        flex-direction: column
+                        flex-wrap: wrap
+                        gap: 4px
+                        max-height: 152px
+
+                        &__ingredients
+                            display: flex
+                            gap: 4px
+                            flex-wrap: wrap
+                            align-items: center
+
+                            span
+                                font-size: 14px
+                                max-width: 133px
+
+                    &__btns
+                        display: flex
+                        gap: 20px
+
+                        &__more
+                            color: $white
+                            border: 2px solid $white
+                            border-radius: 60px
+                            padding: 10px 28px
+                            transition: 0.3s ease
+
+                            display: flex
+                            align-items: center
+
+                            font-size: 17px
+                            font-weight: 600
+                            text-transform: uppercase
+
+                            &:hover
+                                border: 2px solid $orange-hover
+
+                        &__price
+                            font-size: 40px
+                            font-weight: 700
+                            line-height: 130%
+                &__img
+                    position: absolute
+                    right: 0
+                    top: 40px
+        .swiper-pagination
+            display: none
+            @include tablet
+                display: flex

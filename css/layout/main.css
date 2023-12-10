@@ -55,42 +55,6 @@ button {
   overflow-y: hidden;
 }
 
-.swiper-slide {
-  border-radius: 20px;
-}
-
-.swiper-button-prev, .swiper-button-next {
-  height: 70px;
-  width: 71px;
-  color: black;
-  border-radius: 100px;
-  background: white;
-  padding: 20px;
-  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.05));
-  transition: 0.3s ease;
-}
-@media (max-width: 1000px) {
-  .swiper-button-prev, .swiper-button-next {
-    display: none;
-  }
-}
-.swiper-button-prev:hover, .swiper-button-next:hover {
-  background: #f29848;
-  color: white;
-}
-
-.swiper-button-prev {
-  left: var(--swiper-navigation-sides-offset, -15px);
-}
-
-.swiper-button-next {
-  right: var(--swiper-navigation-sides-offset, -15px);
-}
-
-.swiper-button-prev::after, .swiper-button-next::after {
-  font-size: 30px;
-}
-
 .max-width-wrapper {
   width: 100%;
   display: flex;
@@ -101,4 +65,4 @@ button {
   max-width: 1440px;
   display: flex;
   width: 100%;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */
