@@ -118,6 +118,7 @@ button {
 .footer .footer__layout .footer__layout__logo {
   position: absolute;
   top: -60px;
+  z-index: 2;
 }
 @media (max-width: 1000px) {
   .footer .footer__layout .footer__layout__logo {
