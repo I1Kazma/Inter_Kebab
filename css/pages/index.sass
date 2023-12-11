@@ -9,6 +9,17 @@
     .top-banners
         .width-wrapper
             position: relative
+
+    .food-nav__layout
+        overflow-x: auto
+
+        @include desktop-small
+        &::-webkit-scrollbar
+            width: 0
+
+        .food-nav__layout__links
+            width: 1400px
+
     #new, #burgers, #shaurma, #zakuski, #cold_drinks, #milkshakes, #sousi, #tea_coffee
         .width-wrapper
             overflow: hidden

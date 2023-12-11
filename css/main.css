@@ -1785,6 +1785,15 @@ button {
 .main .top-banners .width-wrapper {
   position: relative;
 }
+.main .food-nav__layout {
+  overflow-x: auto;
+}
+.main .food-nav__layout::-webkit-scrollbar {
+  width: 0;
+}
+.main .food-nav__layout .food-nav__layout__links {
+  width: 1400px;
+}
 .main #new .width-wrapper, .main #burgers .width-wrapper, .main #shaurma .width-wrapper, .main #zakuski .width-wrapper, .main #cold_drinks .width-wrapper, .main #milkshakes .width-wrapper, .main #sousi .width-wrapper, .main #tea_coffee .width-wrapper {
   overflow: hidden;
 }
