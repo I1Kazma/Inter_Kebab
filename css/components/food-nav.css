@@ -120,4 +120,45 @@ button {
   max-width: 1440px;
   display: flex;
   width: 100%;
-}/*# sourceMappingURL=main_item.css.map */
+}
+
+.food-nav {
+  padding: 40px 0px 30px;
+}
+.food-nav .food-nav__layout {
+  margin: 0px 20px;
+  width: 100%;
+}
+.food-nav .food-nav__layout .food-nav__layout__links {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  justify-content: space-between;
+}
+.food-nav .food-nav__layout .food-nav__layout__links .food-nav__layout__link {
+  padding: 10px 24px;
+  font-size: 17px;
+  color: black;
+  font-weight: 600;
+  transition: 0.3s ease;
+  border: 1px solid #E0E0E0;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
+}
+.food-nav .food-nav__layout .food-nav__layout__links .food-nav__layout__link span {
+  width: 100%;
+}
+.food-nav .food-nav__layout .food-nav__layout__links .food-nav__layout__link:hover {
+  background: #f29848;
+  color: white !important;
+}
+.food-nav .food-nav__layout .food-nav__layout__links .active {
+  background: #EF7F1B;
+  color: white;
+}
+.food-nav .food-nav__layout .food-nav__layout__links .active:hover {
+  color: white !important;
+  background: #f29848;
+}/*# sourceMappingURL=food-nav.css.map */

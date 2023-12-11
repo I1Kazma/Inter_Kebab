@@ -1,8 +1,29 @@
 @import '../utils/utils'
 @import '../base/style'
 @import '../components/top-banners'
+@import '../components/food-element'
+@import '../components/food-nav'
+@import '../components/reviews'
 
 .main
-    .width-wrapper
-        position: relative
-        overflow: hidden
+    .top-banners
+        .width-wrapper
+            position: relative
+    #new, #burgers, #shaurma, #zakuski, #cold_drinks, #milkshakes, #sousi, #tea_coffee
+        .width-wrapper
+            overflow: hidden
+
+            .food-catalog__layout
+                @include desktop-small
+                    overflow-x: auto
+
+            .food-swiper
+                width: 1400px
+                position: relative
+
+                &:hover
+                    .swiper-button-next, .swiper-button-prev
+                        opacity: 1
+
+                .swiper-button-next, .swiper-button-prev
+                    opacity: 0

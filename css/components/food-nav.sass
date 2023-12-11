@@ -1,0 +1,42 @@
+@import '../utils/utils'
+@import '../base/style'
+
+.food-nav
+    padding: 40px 0px 30px
+
+    .food-nav__layout
+        margin: 0px 20px
+        width: 100%
+
+        .food-nav__layout__links
+            display: flex
+            overflow-x: auto
+            gap: 10px
+            justify-content: space-between
+
+            .food-nav__layout__link
+                padding: 10px 24px
+                font-size: 17px
+                color: black
+                font-weight: 600
+                transition: 0.3s ease
+                border: 1px solid #E0E0E0
+                border-radius: 50px
+                display: flex
+                align-items: center
+                transition: 0.3s ease
+
+                span
+                    width: 100%
+
+                &:hover
+                    background: $orange-hover
+                    color: white !important
+
+            .active
+                background: $orange
+                color: $white
+
+                &:hover
+                    color: $white !important
+                    background: $orange-hover

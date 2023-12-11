@@ -2,9 +2,16 @@
 @import './layout/header'
 @import './layout/footer'
 @import './layout/main_item'
+@import './utils/utils'
 
 @import './pages/index'
 
 main
-    height: 850px
     background: #FAFAFA
+    padding-bottom: 100px
+
+    @include desktop-small
+        padding-bottom: 90px
+
+    @include mobile
+        padding-bottom: 80px

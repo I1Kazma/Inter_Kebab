@@ -120,4 +120,11 @@ button {
   max-width: 1440px;
   display: flex;
   width: 100%;
-}/*# sourceMappingURL=main_item.css.map */
+}
+
+.reviews__layout {
+  margin: 0px 20px;
+}
+.reviews__layout__item {
+  padding: 30px;
+}/*# sourceMappingURL=reviews.css.map */
