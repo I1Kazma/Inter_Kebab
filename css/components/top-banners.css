@@ -9,10 +9,6 @@
   font-family: "Exo 2", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 a {
   text-decoration: none;
   transition: 0.3s ease;
@@ -95,21 +91,6 @@ button {
   font-size: 30px;
 }
 
-.new-item {
-  display: flex;
-  padding: 6px 14px 7px 14px;
-  gap: 10px;
-  border-radius: 50px;
-  background: #98CE52;
-  color: white;
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
 .max-width-wrapper {
   width: 100%;
   display: flex;
@@ -122,21 +103,22 @@ button {
   width: 100%;
 }
 
-.top-banners__layout {
-  max-width: 1400px;
+.top-banners {
   overflow: hidden;
+}
+.top-banners .top-banners__layout {
   margin: 0px 20px;
 }
-.top-banners__layout .top-banner__swiper .swiper-slide {
+.top-banners .top-banners__layout .top-banner__swiper .swiper-slide {
   background: url("../img/banners_bg.svg");
   color: white;
   min-height: 360px;
 }
-.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food {
+.top-banners .top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food {
   padding: 40px 0px 28px 50px;
   position: relative;
 }
-.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content {
+.top-banners .top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content {
   display: flex;
   flex-direction: column;
   gap: 26px;
@@ -144,12 +126,12 @@ button {
   position: relative;
   z-index: 2;
 }
-.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content h3 {
+.top-banners .top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content h3 {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content h3 span {
+.top-banners .top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content h3 span {
   text-align: center;
   font-size: 21px;
   font-weight: 600;
@@ -157,28 +139,28 @@ button {
   letter-spacing: 0.63px;
   text-transform: uppercase;
 }
-.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__info {
+.top-banners .top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__info {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 4px;
   max-height: 152px;
 }
-.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__info__ingredients {
+.top-banners .top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__info__ingredients {
   display: flex;
   gap: 4px;
   flex-wrap: wrap;
   align-items: center;
 }
-.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__info__ingredients span {
+.top-banners .top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__info__ingredients span {
   font-size: 14px;
   max-width: 133px;
 }
-.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__btns {
+.top-banners .top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__btns {
   display: flex;
   gap: 20px;
 }
-.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__btns__more {
+.top-banners .top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__btns__more {
   color: white;
   border: 2px solid white;
   border-radius: 60px;
@@ -190,24 +172,24 @@ button {
   font-weight: 600;
   text-transform: uppercase;
 }
-.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__btns__more:hover {
+.top-banners .top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__btns__more:hover {
   border: 2px solid #f29848;
 }
-.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__btns__price {
+.top-banners .top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__content__btns__price {
   font-size: 40px;
   font-weight: 700;
   line-height: 130%;
 }
-.top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__img {
+.top-banners .top-banners__layout .top-banner__swiper .swiper-slide .top-banners__food__img {
   position: absolute;
   right: 0;
   top: 40px;
 }
-.top-banners__layout .top-banner__swiper .swiper-pagination {
+.top-banners .top-banners__layout .top-banner__swiper .swiper-pagination {
   display: none;
 }
 @media (max-width: 768px) {
-  .top-banners__layout .top-banner__swiper .swiper-pagination {
+  .top-banners .top-banners__layout .top-banner__swiper .swiper-pagination {
     display: flex;
   }
 }/*# sourceMappingURL=top-banners.css.map */
