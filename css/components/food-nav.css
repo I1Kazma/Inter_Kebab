@@ -136,6 +136,9 @@ button {
     padding: 20px 20px 0px 20px !important;
   }
 }
+.sticky .food-nav__layout {
+  margin: 0px !important;
+}
 
 .food-nav {
   padding: 40px 0px 30px;
