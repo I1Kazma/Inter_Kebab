@@ -84,11 +84,11 @@ button {
 }
 
 .swiper-button-prev {
-  left: var(--swiper-navigation-sides-offset, -15px);
+  left: var(--swiper-navigation-sides-offset, 0px);
 }
 
 .swiper-button-next {
-  right: var(--swiper-navigation-sides-offset, -15px);
+  right: var(--swiper-navigation-sides-offset, 0px);
 }
 
 .swiper-button-prev::after, .swiper-button-next::after {
@@ -128,11 +128,18 @@ button {
   gap: 60px;
 }
 
+.catalog-fixed {
+  padding-top: 112px;
+}
+
 .food-catalog__layout {
   margin: 0px 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+.food-catalog__layout::-webkit-scrollbar {
+  width: 0;
 }
 .food-catalog__layout .food-catalog__heading {
   display: flex;
@@ -151,16 +158,32 @@ button {
   color: black;
 }
 .food-catalog__layout .food-catalog__content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-  justify-content: space-between;
+  overflow: auto;
+}
+.food-catalog__layout .food-catalog__content::-webkit-scrollbar {
+  width: 0;
+}
+.food-catalog__layout .food-catalog__content .food-catalog__content__wrapper {
+  display: flex;
   gap: 20px;
+}
+@media (max-width: 1000px) {
+  .food-catalog__layout .food-catalog__content .food-catalog__content__wrapper {
+    overflow: hidden;
+    width: 1040px;
+  }
 }
 .food-catalog__layout .food-element {
   position: relative;
   width: 100%;
   background: #FFF;
   border-radius: 20px;
+  height: 100%;
+}
+.food-catalog__layout .food-element a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .food-catalog__layout .food-element .food-element__img img {
   width: 100%;
@@ -170,14 +193,16 @@ button {
 .food-catalog__layout .food-element .food-element__content {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  height: 100%;
+  justify-content: space-between;
   padding: 10px 20px 16px 20px;
+  gap: 20px;
 }
 .food-catalog__layout .food-element .food-element__content .food-element__content__info {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  min-height: 89px;
+  height: 100%;
 }
 .food-catalog__layout .food-element .food-element__content .food-element__content__info .food-element__content__info__heading {
   display: flex;
@@ -193,7 +218,7 @@ button {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  max-width: 200px;
+  max-width: 226px;
 }
 .food-catalog__layout .food-element .food-element__content .food-element__content__info .food-element__content__info__heading span {
   color: #EF7F1B;

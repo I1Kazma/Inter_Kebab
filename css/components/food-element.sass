@@ -6,11 +6,17 @@
     flex-direction: column
     gap: 60px
 
+.catalog-fixed
+    padding-top: 112px
+
 .food-catalog__layout
     margin: 0px 20px
     width: 100%
     display: flex
     flex-direction: column
+
+    &::-webkit-scrollbar
+        width: 0
 
     .food-catalog__heading
         display: flex
@@ -29,16 +35,29 @@
             color: black
 
     .food-catalog__content
-        display: grid
-        grid-template-columns: repeat(auto-fit, minmax(150px, auto))
-        justify-content: space-between
-        gap: 20px
+        overflow: auto
+
+        &::-webkit-scrollbar
+            width: 0
+
+        .food-catalog__content__wrapper
+            display: flex
+            gap: 20px
+            @include desktop-small
+                overflow: hidden
+                width: 1040px
 
     .food-element
         position: relative
         width: 100%
         background: #FFF
         border-radius: 20px
+        height: 100%
+
+        a
+            height: 100%
+            display: flex
+            flex-direction: column
 
         .food-element__img
             img
@@ -49,14 +68,16 @@
         .food-element__content
             display: flex
             flex-direction: column
-            gap: 40px
+            height: 100%
+            justify-content: space-between
             padding: 10px 20px 16px 20px
+            gap: 20px
 
             .food-element__content__info
                 display: flex
                 flex-direction: column
                 gap: 6px
-                min-height: 89px
+                height: 100%
 
                 .food-element__content__info__heading
                     display: flex
@@ -73,7 +94,7 @@
                         display: -webkit-box
                         -webkit-box-orient: vertical
                         overflow: hidden
-                        max-width: 200px
+                        max-width: 226px
 
                     span
                         color: $orange

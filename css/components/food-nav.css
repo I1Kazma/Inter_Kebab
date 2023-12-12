@@ -84,11 +84,11 @@ button {
 }
 
 .swiper-button-prev {
-  left: var(--swiper-navigation-sides-offset, -15px);
+  left: var(--swiper-navigation-sides-offset, 0px);
 }
 
 .swiper-button-next {
-  right: var(--swiper-navigation-sides-offset, -15px);
+  right: var(--swiper-navigation-sides-offset, 0px);
 }
 
 .swiper-button-prev::after, .swiper-button-next::after {
@@ -122,8 +122,29 @@ button {
   width: 100%;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+  border-bottom: 2px solid #EF7F1B;
+  background: white;
+  padding: 20px !important;
+}
+@media (max-width: 1000px) {
+  .sticky {
+    padding: 20px 20px 0px 20px !important;
+  }
+}
+
 .food-nav {
   padding: 40px 0px 30px;
+  transition: 0.3s ease;
+}
+@media (max-width: 768px) {
+  .food-nav {
+    padding: 60px 0px 30px;
+  }
 }
 .food-nav .food-nav__layout {
   margin: 0px 20px;

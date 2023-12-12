@@ -9,6 +9,10 @@
   font-family: "Exo 2", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   transition: 0.3s ease;
@@ -80,15 +84,30 @@ button {
 }
 
 .swiper-button-prev {
-  left: var(--swiper-navigation-sides-offset, -15px);
+  left: var(--swiper-navigation-sides-offset, 0px);
 }
 
 .swiper-button-next {
-  right: var(--swiper-navigation-sides-offset, -15px);
+  right: var(--swiper-navigation-sides-offset, 0px);
 }
 
 .swiper-button-prev::after, .swiper-button-next::after {
   font-size: 30px;
+}
+
+.new-item {
+  display: flex;
+  padding: 6px 14px 7px 14px;
+  gap: 10px;
+  border-radius: 50px;
+  background: #98CE52;
+  color: white;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .max-width-wrapper {
