@@ -668,6 +668,7 @@ button {
   .catalog__layout {
     grid-template-columns: repeat(2, minmax(140px, 230px));
     grid-template-rows: repeat(auto-fit, 180px);
+    gap: 10px;
   }
 }
 .catalog__layout__item {
