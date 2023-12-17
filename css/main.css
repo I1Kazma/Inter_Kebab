@@ -2812,6 +2812,12 @@ button {
     text-transform: uppercase;
   }
 }
+@media (max-width: 480px) {
+  .catalog__layout .catalog__full img {
+    width: 30px;
+    height: 30px;
+  }
+}
 
 .watched {
   padding-top: 60px;

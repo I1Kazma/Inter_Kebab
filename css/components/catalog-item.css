@@ -363,4 +363,10 @@ button {
     line-height: 150%;
     text-transform: uppercase;
   }
+}
+@media (max-width: 480px) {
+  .catalog__layout .catalog__full img {
+    width: 30px;
+    height: 30px;
+  }
 }/*# sourceMappingURL=catalog-item.css.map */
