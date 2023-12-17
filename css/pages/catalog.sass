@@ -1,0 +1,43 @@
+@import '../utils/utils'
+@import '../base/style'
+@import '../components/food-element'
+@import '../components/breadcrumb'
+@import '../components/catalog-item'
+
+.watched
+    padding-top: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+
+    @include mobile-big
+        padding-top: 40px
+
+    .width-wrapper
+        overflow: hidden
+
+        .food-catalog__layout
+            @include desktop-small
+                overflow-x: auto
+
+            .food-catalog__heading
+                h2
+                    text-transform: math-auto
+
+                    @include mobile
+                        font-size: 17px
+
+            .food-swiper
+                width: 1400px
+                position: relative
+
+                &:hover
+                    .swiper-button-next, .swiper-button-prev
+                        opacity: 1
+
+                .swiper-button-next, .swiper-button-prev
+                    opacity: 0
+
+                    @include desktop-small
+                        display: none

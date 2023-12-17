@@ -1,0 +1,186 @@
+@import '../utils/utils'
+@import '../base/style'
+
+.catalog
+    padding-top: 20px
+
+    &__layout
+        margin: 0px 20px
+        display: grid
+        grid-template-columns: repeat(9, minmax(50px, 151px))
+        grid-template-rows: repeat(3, 300px) 120px
+        grid-column-gap: 0px
+        grid-row-gap: 0px
+        gap: 20px
+
+        @include tablet
+            width: 100%
+            grid-template-columns: repeat(9, minmax(40px, 151px))
+            grid-template-rows: repeat(4, 300px) 120px
+
+        @media (max-width: 576px)
+            grid-template-columns: repeat(2, minmax(140px, 230px))
+            grid-template-rows: repeat(auto-fit, 180px)
+
+        &__item
+            background-position: center !important
+            border-radius: 20px
+            position: relative
+            background-repeat: no-repeat
+            transition: 0.3s ease
+            overflow: hidden
+            display: flex
+            width: 100%
+            height: 100%
+
+            @media (max-width: 576px)
+                grid-area: auto !important
+                max-width: 245px
+                height: 185px
+                width: 100%
+
+            &__bg
+                position: absolute
+                height: 100%
+                width: 100%
+                transition: 0.3s ease
+                object-fit: cover
+
+            &:hover
+                .catalog__layout__item__bg
+                    transform: scale(1.1)
+
+                h3
+                    color: $orange-hover !important
+
+            a
+                height: 100%
+                width: 100%
+                display: flex
+
+                .catalog__layout__item__title
+                    position: absolute
+                    bottom: 0
+                    display: flex
+                    width: 100%
+                    justify-content: space-between
+                    align-items: center
+                    padding: 0px 30px 20px
+
+                    @include mobile-big
+                        padding: 0px 10px 10px
+
+                    h3
+                        font-size: 20px
+                        font-weight: 600
+                        line-height: 130%
+                        text-transform: uppercase
+                        color: White
+                        transition: 0.3s ease
+
+                        @include mobile-big
+                            font-size: 15px
+
+                    img
+                        @include mobile-big
+                            width: 30px
+                            height: 30px
+
+        .combo
+            grid-area: 1 / 1 / 2 / 4
+            @include tablet
+                grid-area: 1/1/2/6
+        .burgers
+            grid-area: 1 / 4 / 2 / 7
+            @include desktop-small
+                grid-area: 1/4/2/7
+
+            @include tablet
+                grid-area: 1/6/2/10
+        .shaurma
+            grid-area: 1 / 7 / 2 / 10
+            @include tablet
+                grid-area: 2/1/2/5
+        .panini
+            grid-area: 2 / 1 / 3 / 5
+
+            @include desktop-small
+                grid-area: 2/1/3/4
+
+            @include tablet
+                grid-area: 2/5/3/10
+
+        .zakuski
+            grid-area: 2 / 5 / 3 / 8
+
+            @include desktop-small
+                grid-area: 2/4/2/7
+
+            @include tablet
+                grid-area: 4/1/3/4
+
+        .milkshakes
+            grid-area: 2 / 8 / 4 / 10
+
+            @include desktop-small
+                grid-area: 3/7/4/10
+
+            @include tablet
+                grid-area: 4/6/4/10
+        .sousi
+            grid-area: 3 / 1 / 4 / 3
+
+            @include desktop-small
+                grid-area: 2/7/2/10
+
+            @include tablet
+                grid-area: 4/4/3/7
+        .tea-coffee
+            grid-area: 3 / 3 / 4 / 5
+
+            @include desktop-small
+                grid-area: 3/1/3/4
+
+            @include tablet
+                grid-area: 4/7/3/10
+        .cold-drinks
+            grid-area: 3 / 5 / 4 / 8
+
+            @include desktop-small
+                grid-area: 3/4/3/7
+
+            @include tablet
+                grid-area: 5/1/4/6
+
+        .catalog__full
+            width: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            background: url("../img/banners_bg.svg")
+            border-radius: 20px
+            grid-area: 4 / 1 / 5 / 10
+            gap: 20px
+
+            @include tablet
+                grid-area: 6/1/5/10
+
+            @media (max-width: 576px)
+                padding: 20px
+
+            &:hover span
+                color: $orange-hover
+
+            span
+                color: white
+                font-size: 32px
+                font-weight: 600
+                line-height: 130%
+                text-transform: uppercase
+                transition: 0.3s ease
+
+                @media (max-width: 576px)
+                    font-size: 17px
+                    font-weight: 600
+                    line-height: 150%
+                    text-transform: uppercase
