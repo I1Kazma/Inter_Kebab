@@ -3544,6 +3544,420 @@ button {
   stroke: white;
 }
 
+/*Цвета проекта*/
+/*Шрифт проекта*/
+/*Базовые стили проекта*/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+a:hover {
+  color: #f29848 !important;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.notification {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  border-radius: 22px;
+  background: #EF7F1B;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 3px 7px 3px 6px;
+  color: white;
+}
+
+.whatsapp rect, .vk rect {
+  transition: 0.3s ease;
+}
+
+.whatsapp:hover rect {
+  fill: #6cd37e;
+}
+
+.vk:hover rect {
+  fill: #3292ff;
+}
+
+.nav--opened {
+  overflow-y: hidden;
+}
+
+.swiper-slide {
+  border-radius: 20px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  height: 70px;
+  width: 71px;
+  color: black;
+  border-radius: 100px;
+  background: white;
+  padding: 20px;
+  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.05));
+  transition: 0.3s ease;
+}
+@media (max-width: 1000px) {
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  background: #f29848;
+  color: white;
+}
+
+.swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, 0px);
+}
+
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, 0px);
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 30px;
+}
+
+.new-item {
+  display: flex;
+  padding: 6px 14px 7px 14px;
+  gap: 10px;
+  border-radius: 50px;
+  background: #98CE52;
+  color: white;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.max-width-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.max-width-wrapper .width-wrapper {
+  max-width: 1440px;
+  display: flex;
+  width: 100%;
+}
+
+/*Цвета проекта*/
+/*Шрифт проекта*/
+/*Базовые стили проекта*/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+a:hover {
+  color: #f29848 !important;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.notification {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  border-radius: 22px;
+  background: #EF7F1B;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 3px 7px 3px 6px;
+  color: white;
+}
+
+.whatsapp rect, .vk rect {
+  transition: 0.3s ease;
+}
+
+.whatsapp:hover rect {
+  fill: #6cd37e;
+}
+
+.vk:hover rect {
+  fill: #3292ff;
+}
+
+.nav--opened {
+  overflow-y: hidden;
+}
+
+.swiper-slide {
+  border-radius: 20px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  height: 70px;
+  width: 71px;
+  color: black;
+  border-radius: 100px;
+  background: white;
+  padding: 20px;
+  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.05));
+  transition: 0.3s ease;
+}
+@media (max-width: 1000px) {
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  background: #f29848;
+  color: white;
+}
+
+.swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, 0px);
+}
+
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, 0px);
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 30px;
+}
+
+.new-item {
+  display: flex;
+  padding: 6px 14px 7px 14px;
+  gap: 10px;
+  border-radius: 50px;
+  background: #98CE52;
+  color: white;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.max-width-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.max-width-wrapper .width-wrapper {
+  max-width: 1440px;
+  display: flex;
+  width: 100%;
+}
+
+.page-header__layout {
+  margin: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.page-header__layout__breadcrumb__prev, .page-header__layout__breadcrumb__current {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+}
+@media (max-width: 480px) {
+  .page-header__layout__breadcrumb__prev, .page-header__layout__breadcrumb__current {
+    font-size: 15px;
+  }
+}
+.page-header__layout__breadcrumb__current {
+  color: #242424;
+}
+.page-header__layout__breadcrumb__prev {
+  color: #AAA;
+}
+.page-header__layout__title h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+@media (max-width: 480px) {
+  .page-header__layout__title h1 {
+    font-size: 17px;
+  }
+}
+
+.sales {
+  padding-top: 20px;
+}
+.sales .sales__layout {
+  margin: 0px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.sales .sales__layout .sales__item {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .sales .sales__layout .sales__item {
+    flex-direction: column;
+  }
+}
+.sales .sales__layout .sales__item img {
+  border-radius: 20px;
+  width: 453px;
+  height: 244px;
+}
+@media (max-width: 1000px) {
+  .sales .sales__layout .sales__item img {
+    width: 320px;
+    height: 170px;
+  }
+}
+@media (max-width: 768px) {
+  .sales .sales__layout .sales__item img {
+    width: 100%;
+    height: auto;
+  }
+}
+.sales .sales__layout .sales__item__content {
+  padding: 20px 40px;
+  border-radius: 20px;
+  background: white;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .sales .sales__layout .sales__item__content {
+    padding: 20px;
+  }
+}
+.sales .sales__layout .sales__item__content h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+@media (max-width: 1000px) {
+  .sales .sales__layout .sales__item__content h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .sales .sales__layout .sales__item__content h2 {
+    font-size: 17px;
+  }
+}
+.sales .sales__layout .sales__item__content span {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 130%;
+  padding-top: 6px;
+  max-width: 667px;
+  display: flex;
+}
+@media (max-width: 1000px) {
+  .sales .sales__layout .sales__item__content span {
+    font-size: 17px;
+  }
+}
+@media (max-width: 480px) {
+  .sales .sales__layout .sales__item__content span {
+    font-size: 15px;
+  }
+}
+.sales .sales__layout .sales__item__content .sales__item__content__btns {
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+.sales .sales__layout .sales__item__content .sales__item__content__btns .sales__item__content__btn-1 {
+  display: flex;
+  height: 48px;
+  padding: 10px 28px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  background: #EF7F1B;
+  color: white;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+.sales .sales__layout .sales__item__content .sales__item__content__btns .sales__item__content__btn-1:hover {
+  background: #f29848;
+  color: white !important;
+}
+@media (max-width: 480px) {
+  .sales .sales__layout .sales__item__content .sales__item__content__btns .sales__item__content__btn-1 {
+    font-size: 15px;
+    width: 100%;
+  }
+}
+.sales .sales__layout .sales__item__content .sales__item__content__btns .sales__item__content__btn-2 {
+  border: 2px solid #EF7F1B;
+  border-radius: 60px;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  color: black;
+  text-transform: uppercase;
+  padding: 10px 28px;
+}
+.sales .sales__layout .sales__item__content .sales__item__content__btns .sales__item__content__btn-2:hover {
+  background: #f29848;
+  border: 2px solid #f29848;
+  color: white !important;
+}
+@media (max-width: 480px) {
+  .sales .sales__layout .sales__item__content .sales__item__content__btns .sales__item__content__btn-2 {
+    font-size: 15px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+}
+
 main {
   background: #FAFAFA;
   padding-bottom: 100px;

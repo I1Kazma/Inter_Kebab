@@ -1,0 +1,119 @@
+@import '../utils/utils'
+@import '../base/style'
+@import '../components/breadcrumb'
+
+.sales
+    padding-top: 20px
+
+    .sales__layout
+        margin: 0px 20px
+        width: 100%
+        display: flex
+        flex-direction: column
+        gap: 40px
+
+        .sales__item
+            display: flex
+            gap: 10px
+            width: 100%
+
+            @include tablet
+                flex-direction: column
+
+            img
+                border-radius: 20px
+                width: 453px
+                height: 244px
+
+                @include desktop-small
+                    width: 320px
+                    height: 170px
+
+                @include tablet
+                    width: 100%
+                    height: auto
+
+        .sales__item__content
+            padding: 20px 40px
+            border-radius: 20px
+            background: white
+            width: 100%
+
+            @include tablet
+                padding: 20px
+
+            h2
+                font-size: 32px
+                font-weight: 600
+
+                @include desktop-small
+                    font-size: 20px
+
+                @include mobile-big
+                    font-size: 17px
+
+            span
+                font-size: 24px
+                font-weight: 400
+                line-height: 130%
+                padding-top: 6px
+                max-width: 667px
+                display: flex
+
+                @include desktop-small
+                    font-size: 17px
+
+                @include mobile-big
+                    font-size: 15px
+
+            .sales__item__content__btns
+                display: flex
+                gap: 20px
+                padding-top: 20px
+                flex-wrap: wrap
+
+                .sales__item__content__btn-1
+                    display: flex
+                    height: 48px
+                    padding: 10px 28px
+                    justify-content: center
+                    align-items: center
+                    border-radius: 60px
+                    background: $orange
+                    color: white
+
+                    font-size: 17px
+                    font-style: normal
+                    font-weight: 600
+                    line-height: 130%
+                    text-transform: uppercase
+
+                    &:hover
+                        background: $orange-hover
+                        color: white !important
+
+                    @include mobile-big
+                        font-size: 15px
+                        width: 100%
+
+                .sales__item__content__btn-2
+                    border: 2px solid $orange
+                    border-radius: 60px
+                    font-size: 17px
+                    font-style: normal
+                    font-weight: 600
+                    line-height: 130%
+                    color: black
+                    text-transform: uppercase
+                    padding: 10px 28px
+
+                    &:hover
+                        background: $orange-hover
+                        border: 2px solid $orange-hover
+                        color: white !important
+
+                    @include mobile-big
+                        font-size: 15px
+                        width: 100%
+                        justify-content: center
+                        display: flex
