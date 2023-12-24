@@ -628,6 +628,7 @@ button {
 .category-items .category-items__layout .category-items__layout__tabs .layout-list .food-element a .food-element__content {
   flex-direction: row;
   padding: 30px;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .category-items .category-items__layout .category-items__layout__tabs .layout-list .food-element a .food-element__content {
