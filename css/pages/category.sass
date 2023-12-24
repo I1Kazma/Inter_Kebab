@@ -1,0 +1,154 @@
+@import '../components/food-element'
+@import '../components/breadcrumb'
+@import '../utils/utils'
+@import '../base/style'
+
+.category-items
+
+    .max-width-wrapper
+        .width-wrapper
+            overflow: hidden
+    .category-items__layout
+        margin: 0px 20px
+        width: 100%
+        overflow: hidden
+        .category-items__layout__tabs
+            overflow: hidden
+            padding-top: 30px
+
+            .category-items__layout__tab-head
+                display: flex
+                justify-content: space-between
+                align-items: center
+
+            .category-items__layout__tab-head__wrapper
+                display: flex
+                gap: 20px
+
+                @media (max-width: 540px)
+                    overflow: auto
+
+                    &::-webkit-scrollbar
+                        width: 0
+
+            .layout-btns
+                display: flex
+                gap: 20px
+                align-items: center
+
+                @media (max-width: 640px)
+                    display: none
+
+                button
+                    svg
+                        path
+                            transition: 0.3s ease
+
+                    &:hover
+                        path
+                            stroke: $orange-hover
+
+            .category-items__layout__tab-head__item
+                cursor: pointer
+                padding: 10px 24px
+                font-size: 17px
+                color: black
+                font-weight: 600
+                transition: 0.3s ease
+                border: 1px solid #E0E0E0
+                border-radius: 50px
+                display: flex
+                align-items: center
+                transition: 0.3s ease
+
+                &:hover, &.active
+                    background: #f29848
+                    color: white !important
+
+            #category-items__layout__tab-head__options
+                display: none
+
+            .category-items__layout__tab-content
+                transition: 0.3s ease
+
+            .layout-grid
+                padding-top: 30px
+                display: grid
+                grid-template-columns: repeat(auto-fit, minmax(265px, auto))
+                gap: 20px
+
+                @media (max-width: 560px)
+                    grid-template-columns: repeat(auto-fit, minmax(200px, auto))
+
+                    .food-element
+                        transition: 0.3s ease
+
+            .layout-list
+                padding-top: 30px
+                display: flex
+                flex-direction: column
+                gap: 20px
+
+                .food-element
+                    transition: 0.3s ease
+                    max-height: 190px
+
+                    a
+                        flex-direction: row
+
+                        .food-element__img
+                            img
+                                border-radius: 20px 0px 0px 20px
+                                height: 190px
+                                object-fit: cover
+                                width: 217px
+
+                        .food-element__content
+                            flex-direction: row
+                            padding: 30px
+
+                            @include tablet
+                                padding: 30px 20px
+
+                            .food-element__content__info__heading
+                                justify-content: flex-start
+                                gap: 20px
+                                h3
+                                    max-width: none
+
+                                span
+                                    min-width: 58px
+
+            .more-button__wrapper
+                margin-top: 30px
+                display: flex
+                justify-content: center
+                align-items: center
+                .more-button
+                    border-radius: 60px
+                    border: 2px solid $orange
+                    transition: 0.3s ease
+                    padding: 10px 28px
+
+                    font-size: 17px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 130%
+                    text-transform: uppercase
+
+                    display: flex
+                    gap: 10px
+                    align-items: center
+
+                    svg
+                        path
+                            transition: 0.3s ease
+
+                    &:hover
+                        background: $orange-hover
+                        border: 2px solid $orange-hover
+                        color: white
+
+                        svg
+                            path
+                                stroke: white

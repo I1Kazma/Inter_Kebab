@@ -47,77 +47,77 @@
                 overflow: hidden
                 width: 1040px
 
-    .food-element
-        position: relative
-        width: 100%
-        background: #FFF
-        border-radius: 20px
+.food-element
+    position: relative
+    width: 100%
+    background: #FFF
+    border-radius: 20px
+    height: 100%
+
+    a
         height: 100%
+        display: flex
+        flex-direction: column
 
-        a
-            height: 100%
+    .food-element__img
+        img
+            width: 100%
+            border-radius: 20px 20px 0px 0px
+            max-height: 390px
+
+    .food-element__content
+        display: flex
+        flex-direction: column
+        height: 100%
+        justify-content: space-between
+        padding: 10px 20px 16px 20px
+        gap: 20px
+
+        .food-element__content__info
             display: flex
             flex-direction: column
-
-        .food-element__img
-            img
-                width: 100%
-                border-radius: 20px 20px 0px 0px
-                max-height: 390px
-
-        .food-element__content
-            display: flex
-            flex-direction: column
+            gap: 6px
             height: 100%
-            justify-content: space-between
-            padding: 10px 20px 16px 20px
-            gap: 20px
 
-            .food-element__content__info
+            .food-element__content__info__heading
                 display: flex
-                flex-direction: column
-                gap: 6px
-                height: 100%
+                justify-content: space-between
+                width: 100%
 
-                .food-element__content__info__heading
-                    display: flex
-                    justify-content: space-between
-                    width: 100%
-
-                    h3
-                        font-size: 17px
-                        font-weight: 600
-                        line-height: 130%
-                        color: #242424
-
-                        -webkit-line-clamp: 2
-                        display: -webkit-box
-                        -webkit-box-orient: vertical
-                        overflow: hidden
-                        max-width: 226px
-
-                    span
-                        color: $orange
-                        font-size: 17px
-                        font-weight: 600
-                        line-height: 130%
-
-                span
-                    font-size: 15px
-                    font-style: normal
-                    font-weight: 400
+                h3
+                    font-size: 17px
+                    font-weight: 600
                     line-height: 130%
-                    color: #AAA
+                    color: #242424
 
                     -webkit-line-clamp: 2
                     display: -webkit-box
                     -webkit-box-orient: vertical
                     overflow: hidden
-
-            .food-element__content__price
+                    max-width: 226px
 
                 span
-                    font-size: 28px
-                    color: #242424
+                    color: $orange
+                    font-size: 17px
                     font-weight: 600
                     line-height: 130%
+
+            span
+                font-size: 15px
+                font-style: normal
+                font-weight: 400
+                line-height: 130%
+                color: #AAA
+
+                -webkit-line-clamp: 2
+                display: -webkit-box
+                -webkit-box-orient: vertical
+                overflow: hidden
+
+        .food-element__content__price
+
+            span
+                font-size: 28px
+                color: #242424
+                font-weight: 600
+                line-height: 130%
