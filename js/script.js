@@ -20,7 +20,6 @@ window.addEventListener("scroll", function () {
 });
 
 let food_nav_links = document.querySelectorAll(".food-nav__layout__link")
-console.log(food_nav_links)
 
 food_nav_links.forEach((food_nav_link, index) => {
     food_nav_link.onclick = () => {
