@@ -114,18 +114,13 @@ const layout__btns = document.querySelector(".layout-btns button")
 const layout_grid = document.querySelector("#layout_grid")
 const layout_list = document.querySelector("#layout_list")
 
-layout__btns.onclick = function () {
-    changeLayout()
-}
 
-function changeLayout() {
-    layout_grid.onclick = () => {
-        contents__layout.classList.remove("layout-list");
-        contents__layout.classList.add("layout-grid");
-    };
+layout_grid.onclick = () => {
+    contents__layout.classList.remove("layout-list");
+    contents__layout.classList.add("layout-grid");
+};
 
-    layout_list.onclick = () => {
-        contents__layout.classList.remove("layout-grid");
-        contents__layout.classList.add("layout-list");
-    };
-}
+layout_list.onclick = () => {
+    contents__layout.classList.remove("layout-grid");
+    contents__layout.classList.add("layout-list");
+};
