@@ -136,6 +136,17 @@ span {
 .small-text {
   font-size: 17px;
 }
+@media (max-width: 480px) {
+  .small-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 17px !important;
+  }
+}
 
 .food-catalog {
   overflow: hidden;
