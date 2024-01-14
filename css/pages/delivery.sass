@@ -1,0 +1,270 @@
+@import '../utils/utils'
+@import '../base/style'
+
+.delivery
+
+    .delivery__layout
+        margin: 0px 20px
+        position: relative
+        display: flex
+        flex-direction: column
+        padding-top: 20px
+        width: 100%
+        gap: 60px
+
+        @include desktop-small
+            gap: 20px
+
+        .normal-delivery
+
+            .delivery-content
+                max-width: calc(100% - 616px) !important
+
+            .border
+                max-width: 524px !important
+
+        .contacts__layout__map
+            display: flex
+
+        .normal-delivery, .pickup-delivery, .payment, .refund-way
+            border-radius: 20px
+            background: #FFF
+            padding: 30px
+            display: flex
+            gap: 20px
+            align-items: flex-start
+            box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.04)
+
+            @include mobile-big
+                padding: 20px 12px
+                flex-direction: column
+
+            img
+                @include mobile-big
+                    max-width: 46px
+
+            .delivery-content
+                display: flex
+                flex-direction: column
+                gap: 40px
+
+                @include desktop-small
+                    max-width: none !important
+
+                @include mobile-big
+                gap: 20px
+
+                .delivery-header
+                    display: flex
+                    flex-direction: column
+                    gap: 20px
+
+                    .delivery-header__top
+                        display: flex
+                        gap: 20px
+                        align-items: center
+
+                        .delivery-header__title
+                            display: flex
+                            flex-direction: column
+                            gap: 10px
+
+                            h2
+
+                            span
+
+                    .delivery-header__info
+                        display: flex
+                        gap: 10px
+                        justify-content: space-between
+                        flex-wrap: wrap
+
+                        span:first-child
+                            color: #AAA
+
+                        .delivery-header__info__text
+                            display: flex
+                            gap: 10px
+
+                            span
+                                font-weight: 500
+
+                    .border
+                        padding-top: 16px
+                        max-width: 524px
+                        border-top: 1px solid #E0E0E0
+                        justify-content: space-between
+                    .delivery-header__notice
+                        span
+                            color: $orange
+                            font-weight: 500
+
+                .delivery-body
+                    display: flex
+                    flex-direction: column
+                    gap: 20px
+
+                    .delivery-body__text
+                        display: flex
+                        flex-direction: column
+                        gap: 10px
+
+                    .delivery-body__info
+                        display: flex
+                        gap: 10px
+                        justify-content: space-between
+                        flex-wrap: wrap
+
+                        span:first-child
+                            color: #AAA
+
+                        a
+                            color: $black
+                            text-decoration: underline
+
+                        .delivery-body__info__text
+                            display: flex
+                            gap: 10px
+
+                            span
+                                font-weight: 500
+
+                    .border
+                        padding-top: 16px
+                        padding-top: 16px
+                        justify-content: flex-start
+                        border-top: 1px solid #E0E0E0
+                        align-items: center
+                        gap: 30px
+
+                    .payment-items
+                        display: grid
+                        grid-template-columns: repeat(auto-fit, minmax(217px, auto))
+                        justify-content: center
+                        gap: 20px
+
+                        .payment-item
+                            max-width: 217px
+                            display: flex
+                            flex-direction: column
+                            align-items: center
+                            gap: 10px
+
+                            @include mobile-big
+                                flex-direction: row
+
+                            .payment-item__img
+                                border-radius: 20px
+                                border: 1px solid #E0E0E0
+                                width: 100%
+                                display: flex
+                                justify-content: center
+                                min-height: 100px
+
+                            img
+                                padding: 20px 0px
+                                object-fit: contain
+                                max-width: none !important
+
+                    .delivery-body__notice
+                        span
+                            color: $orange
+                            font-weight: 500
+
+        .delivery-notice
+            position: absolute
+            right: -15px
+            top: 0px
+            background: #FAFAFA
+            padding: 20px
+            border-bottom-right-radius: 20px
+            border-bottom-left-radius: 20px
+
+            @include desktop-small
+                position: static
+                padding: 0px
+
+            .delivery-notice__wrapper
+                display: flex
+                flex-direction: column
+                gap: 10px
+                padding: 30px
+                background: white
+                border-radius: 20px
+                max-width: 476px
+
+                @include desktop-small
+                    max-width: none
+
+                @include mobile-big
+                    padding: 20px 12px
+
+            .delivery-notice__title
+                color: $orange
+                font-size: 32px
+                font-style: normal
+                font-weight: 600
+
+            .delivery-notice__border
+                border-top: 1px solid #E1C5C5
+                padding-top: 16px
+
+        .refund
+            display: flex
+            gap: 20px
+            border-radius: 20px
+            background: var(--white, #FFF)
+            box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.04)
+
+            @include desktop-small
+                flex-direction: column
+
+            .refund__contacts,   .refund__info
+                padding: 30px 30px 40px 30px
+
+                gap: 10px
+
+                border-radius: 20px
+                background: var(--white, #FFF)
+                box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.04)
+
+                h2
+                    font-size: 32px
+
+                .phone
+                    color: $orange
+                    font-size: 32px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+
+                    @include mobile-big
+                        font-size: 20px
+
+                .mail
+                    font-size: 20px
+                    color: $orange
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+
+                    @include mobile-big
+                        font-size: 15px
+
+            .refund__contacts
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                display: flex
+                width: 100%
+                max-width: 572px
+
+                @include desktop-small
+                    max-width: none
+
+            .refund__info
+                flex-direction: column
+                display: flex
+
+                .small-text
+                    color: #AAA

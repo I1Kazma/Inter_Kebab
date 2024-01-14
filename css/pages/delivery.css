@@ -1,0 +1,429 @@
+@charset "UTF-8";
+/*Цвета проекта*/
+/*Шрифт проекта*/
+/*Базовые стили проекта*/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+a:hover {
+  color: #f29848 !important;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+span {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 130%;
+}
+@media (max-width: 480px) {
+  span {
+    font-size: 15px;
+  }
+}
+
+.notification {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  border-radius: 22px;
+  background: #EF7F1B;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 3px 7px 3px 6px;
+  color: white;
+}
+
+.whatsapp rect, .vk rect {
+  transition: 0.3s ease;
+}
+
+.whatsapp:hover rect {
+  fill: #6cd37e;
+}
+
+.vk:hover rect {
+  fill: #3292ff;
+}
+
+.nav--opened {
+  overflow-y: hidden;
+}
+
+.swiper-slide {
+  border-radius: 20px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  height: 70px;
+  width: 71px;
+  color: black;
+  border-radius: 100px;
+  background: white;
+  padding: 20px;
+  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.05));
+  transition: 0.3s ease;
+}
+@media (max-width: 1000px) {
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  background: #f29848;
+  color: white;
+}
+
+.swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, 0px);
+}
+
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, 0px);
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 30px;
+}
+
+.new-item {
+  display: flex;
+  padding: 6px 14px 7px 14px;
+  gap: 10px;
+  border-radius: 50px;
+  background: #98CE52;
+  color: white;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.max-width-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.max-width-wrapper .width-wrapper {
+  max-width: 1440px;
+  display: flex;
+  width: 100%;
+}
+
+.small-text {
+  font-size: 17px;
+}
+@media (max-width: 480px) {
+  .small-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 17px !important;
+  }
+}
+
+.delivery .delivery__layout {
+  margin: 0px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  width: 100%;
+  gap: 60px;
+}
+@media (max-width: 1000px) {
+  .delivery .delivery__layout {
+    gap: 20px;
+  }
+}
+.delivery .delivery__layout .normal-delivery .delivery-content {
+  max-width: calc(100% - 616px) !important;
+}
+.delivery .delivery__layout .normal-delivery .border {
+  max-width: 524px !important;
+}
+.delivery .delivery__layout .contacts__layout__map {
+  display: flex;
+}
+.delivery .delivery__layout .normal-delivery, .delivery .delivery__layout .pickup-delivery, .delivery .delivery__layout .payment, .delivery .delivery__layout .refund-way {
+  border-radius: 20px;
+  background: #FFF;
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.04);
+}
+@media (max-width: 480px) {
+  .delivery .delivery__layout .normal-delivery, .delivery .delivery__layout .pickup-delivery, .delivery .delivery__layout .payment, .delivery .delivery__layout .refund-way {
+    padding: 20px 12px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .delivery .delivery__layout .normal-delivery img, .delivery .delivery__layout .pickup-delivery img, .delivery .delivery__layout .payment img, .delivery .delivery__layout .refund-way img {
+    max-width: 46px;
+  }
+}
+.delivery .delivery__layout .normal-delivery .delivery-content, .delivery .delivery__layout .pickup-delivery .delivery-content, .delivery .delivery__layout .payment .delivery-content, .delivery .delivery__layout .refund-way .delivery-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  gap: 20px;
+}
+@media (max-width: 1000px) {
+  .delivery .delivery__layout .normal-delivery .delivery-content, .delivery .delivery__layout .pickup-delivery .delivery-content, .delivery .delivery__layout .payment .delivery-content, .delivery .delivery__layout .refund-way .delivery-content {
+    max-width: none !important;
+  }
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-header, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-header, .delivery .delivery__layout .payment .delivery-content .delivery-header, .delivery .delivery__layout .refund-way .delivery-content .delivery-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-header .delivery-header__top, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-header .delivery-header__top, .delivery .delivery__layout .payment .delivery-content .delivery-header .delivery-header__top, .delivery .delivery__layout .refund-way .delivery-content .delivery-header .delivery-header__top {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-header .delivery-header__top .delivery-header__title, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-header .delivery-header__top .delivery-header__title, .delivery .delivery__layout .payment .delivery-content .delivery-header .delivery-header__top .delivery-header__title, .delivery .delivery__layout .refund-way .delivery-content .delivery-header .delivery-header__top .delivery-header__title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-header .delivery-header__info, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-header .delivery-header__info, .delivery .delivery__layout .payment .delivery-content .delivery-header .delivery-header__info, .delivery .delivery__layout .refund-way .delivery-content .delivery-header .delivery-header__info {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-header .delivery-header__info span:first-child, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-header .delivery-header__info span:first-child, .delivery .delivery__layout .payment .delivery-content .delivery-header .delivery-header__info span:first-child, .delivery .delivery__layout .refund-way .delivery-content .delivery-header .delivery-header__info span:first-child {
+  color: #AAA;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-header .delivery-header__info .delivery-header__info__text, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-header .delivery-header__info .delivery-header__info__text, .delivery .delivery__layout .payment .delivery-content .delivery-header .delivery-header__info .delivery-header__info__text, .delivery .delivery__layout .refund-way .delivery-content .delivery-header .delivery-header__info .delivery-header__info__text {
+  display: flex;
+  gap: 10px;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-header .delivery-header__info .delivery-header__info__text span, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-header .delivery-header__info .delivery-header__info__text span, .delivery .delivery__layout .payment .delivery-content .delivery-header .delivery-header__info .delivery-header__info__text span, .delivery .delivery__layout .refund-way .delivery-content .delivery-header .delivery-header__info .delivery-header__info__text span {
+  font-weight: 500;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-header .border, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-header .border, .delivery .delivery__layout .payment .delivery-content .delivery-header .border, .delivery .delivery__layout .refund-way .delivery-content .delivery-header .border {
+  padding-top: 16px;
+  max-width: 524px;
+  border-top: 1px solid #E0E0E0;
+  justify-content: space-between;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-header .delivery-header__notice span, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-header .delivery-header__notice span, .delivery .delivery__layout .payment .delivery-content .delivery-header .delivery-header__notice span, .delivery .delivery__layout .refund-way .delivery-content .delivery-header .delivery-header__notice span {
+  color: #EF7F1B;
+  font-weight: 500;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-body, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-body, .delivery .delivery__layout .payment .delivery-content .delivery-body, .delivery .delivery__layout .refund-way .delivery-content .delivery-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-body .delivery-body__text, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-body .delivery-body__text, .delivery .delivery__layout .payment .delivery-content .delivery-body .delivery-body__text, .delivery .delivery__layout .refund-way .delivery-content .delivery-body .delivery-body__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-body .delivery-body__info, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-body .delivery-body__info, .delivery .delivery__layout .payment .delivery-content .delivery-body .delivery-body__info, .delivery .delivery__layout .refund-way .delivery-content .delivery-body .delivery-body__info {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-body .delivery-body__info span:first-child, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-body .delivery-body__info span:first-child, .delivery .delivery__layout .payment .delivery-content .delivery-body .delivery-body__info span:first-child, .delivery .delivery__layout .refund-way .delivery-content .delivery-body .delivery-body__info span:first-child {
+  color: #AAA;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-body .delivery-body__info a, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-body .delivery-body__info a, .delivery .delivery__layout .payment .delivery-content .delivery-body .delivery-body__info a, .delivery .delivery__layout .refund-way .delivery-content .delivery-body .delivery-body__info a {
+  color: #24282D;
+  text-decoration: underline;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-body .delivery-body__info .delivery-body__info__text, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-body .delivery-body__info .delivery-body__info__text, .delivery .delivery__layout .payment .delivery-content .delivery-body .delivery-body__info .delivery-body__info__text, .delivery .delivery__layout .refund-way .delivery-content .delivery-body .delivery-body__info .delivery-body__info__text {
+  display: flex;
+  gap: 10px;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-body .delivery-body__info .delivery-body__info__text span, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-body .delivery-body__info .delivery-body__info__text span, .delivery .delivery__layout .payment .delivery-content .delivery-body .delivery-body__info .delivery-body__info__text span, .delivery .delivery__layout .refund-way .delivery-content .delivery-body .delivery-body__info .delivery-body__info__text span {
+  font-weight: 500;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-body .border, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-body .border, .delivery .delivery__layout .payment .delivery-content .delivery-body .border, .delivery .delivery__layout .refund-way .delivery-content .delivery-body .border {
+  padding-top: 16px;
+  padding-top: 16px;
+  justify-content: flex-start;
+  border-top: 1px solid #E0E0E0;
+  align-items: center;
+  gap: 30px;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-body .payment-items, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-body .payment-items, .delivery .delivery__layout .payment .delivery-content .delivery-body .payment-items, .delivery .delivery__layout .refund-way .delivery-content .delivery-body .payment-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(217px, auto));
+  justify-content: center;
+  gap: 20px;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-body .payment-items .payment-item, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-body .payment-items .payment-item, .delivery .delivery__layout .payment .delivery-content .delivery-body .payment-items .payment-item, .delivery .delivery__layout .refund-way .delivery-content .delivery-body .payment-items .payment-item {
+  max-width: 217px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 480px) {
+  .delivery .delivery__layout .normal-delivery .delivery-content .delivery-body .payment-items .payment-item, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-body .payment-items .payment-item, .delivery .delivery__layout .payment .delivery-content .delivery-body .payment-items .payment-item, .delivery .delivery__layout .refund-way .delivery-content .delivery-body .payment-items .payment-item {
+    flex-direction: row;
+  }
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-body .payment-items .payment-item .payment-item__img, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-body .payment-items .payment-item .payment-item__img, .delivery .delivery__layout .payment .delivery-content .delivery-body .payment-items .payment-item .payment-item__img, .delivery .delivery__layout .refund-way .delivery-content .delivery-body .payment-items .payment-item .payment-item__img {
+  border-radius: 20px;
+  border: 1px solid #E0E0E0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 100px;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-body .payment-items .payment-item img, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-body .payment-items .payment-item img, .delivery .delivery__layout .payment .delivery-content .delivery-body .payment-items .payment-item img, .delivery .delivery__layout .refund-way .delivery-content .delivery-body .payment-items .payment-item img {
+  padding: 20px 0px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: none !important;
+}
+.delivery .delivery__layout .normal-delivery .delivery-content .delivery-body .delivery-body__notice span, .delivery .delivery__layout .pickup-delivery .delivery-content .delivery-body .delivery-body__notice span, .delivery .delivery__layout .payment .delivery-content .delivery-body .delivery-body__notice span, .delivery .delivery__layout .refund-way .delivery-content .delivery-body .delivery-body__notice span {
+  color: #EF7F1B;
+  font-weight: 500;
+}
+.delivery .delivery__layout .delivery-notice {
+  position: absolute;
+  right: -15px;
+  top: 0px;
+  background: #FAFAFA;
+  padding: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+@media (max-width: 1000px) {
+  .delivery .delivery__layout .delivery-notice {
+    position: static;
+    padding: 0px;
+  }
+}
+.delivery .delivery__layout .delivery-notice .delivery-notice__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  max-width: 476px;
+}
+@media (max-width: 1000px) {
+  .delivery .delivery__layout .delivery-notice .delivery-notice__wrapper {
+    max-width: none;
+  }
+}
+@media (max-width: 480px) {
+  .delivery .delivery__layout .delivery-notice .delivery-notice__wrapper {
+    padding: 20px 12px;
+  }
+}
+.delivery .delivery__layout .delivery-notice .delivery-notice__title {
+  color: #EF7F1B;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+}
+.delivery .delivery__layout .delivery-notice .delivery-notice__border {
+  border-top: 1px solid #E1C5C5;
+  padding-top: 16px;
+}
+.delivery .delivery__layout .refund {
+  display: flex;
+  gap: 20px;
+  border-radius: 20px;
+  background: var(--white, #FFF);
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.04);
+}
+@media (max-width: 1000px) {
+  .delivery .delivery__layout .refund {
+    flex-direction: column;
+  }
+}
+.delivery .delivery__layout .refund .refund__contacts, .delivery .delivery__layout .refund .refund__info {
+  padding: 30px 30px 40px 30px;
+  gap: 10px;
+  border-radius: 20px;
+  background: var(--white, #FFF);
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.04);
+}
+.delivery .delivery__layout .refund .refund__contacts h2, .delivery .delivery__layout .refund .refund__info h2 {
+  font-size: 32px;
+}
+.delivery .delivery__layout .refund .refund__contacts .phone, .delivery .delivery__layout .refund .refund__info .phone {
+  color: #EF7F1B;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 480px) {
+  .delivery .delivery__layout .refund .refund__contacts .phone, .delivery .delivery__layout .refund .refund__info .phone {
+    font-size: 20px;
+  }
+}
+.delivery .delivery__layout .refund .refund__contacts .mail, .delivery .delivery__layout .refund .refund__info .mail {
+  font-size: 20px;
+  color: #EF7F1B;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 480px) {
+  .delivery .delivery__layout .refund .refund__contacts .mail, .delivery .delivery__layout .refund .refund__info .mail {
+    font-size: 15px;
+  }
+}
+.delivery .delivery__layout .refund .refund__contacts {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  max-width: 572px;
+}
+@media (max-width: 1000px) {
+  .delivery .delivery__layout .refund .refund__contacts {
+    max-width: none;
+  }
+}
+.delivery .delivery__layout .refund .refund__info {
+  flex-direction: column;
+  display: flex;
+}
+.delivery .delivery__layout .refund .refund__info .small-text {
+  color: #AAA;
+}/*# sourceMappingURL=delivery.css.map */

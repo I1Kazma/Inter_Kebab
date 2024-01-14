@@ -1,6 +1,4 @@
 @import '../utils/utils'
-@import '../base/style'
-
 .page-header
 
     &__layout
@@ -8,6 +6,7 @@
         display: flex
         flex-direction: column
         gap: 20px
+        width: 100%
 
         &__breadcrumb
 
@@ -26,9 +25,37 @@
 
         &__title
 
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+
             h1
                 font-size: 32px
                 font-weight: 600
 
                 @include mobile-big
                     font-size: 17px
+
+            .page-header__layout__title__btns
+                display: flex
+                gap: 10px
+
+                @include desktop-small
+                    display: none
+
+                a
+                    padding: 7px 16px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    gap: 10px
+
+                    border-radius: 50px
+                    background: $white
+                    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.04)
+
+                    color: black
+                    font-size: 17px
+                    font-weight: 600
+                    line-height: 130%
