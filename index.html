@@ -17,13 +17,43 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
 
     <title>Главная</title>
   </head>
   <body>
     <header class="header">
+      <section class="modal-window" id="login_window">
+      <div class="modal-window__background">
+      </div>  
+      <div class="modal-window__content">
+        <a href="#" class="login-window__close" id="login_window__close"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M11.75 11.7505L28.2492 28.2496" stroke="#AAAAAA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11.75 28.2495L28.2492 11.7504" stroke="#AAAAAA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg></a>
+        <h2>Добро пожаловать!</h2>
+        <form action="" class="auth-form">
+          <div class="c-input">
+            <input type="email" class="c-input__field" />
+            <div class="c-input__bar"></div>
+            <label class="c-input__label">Е-Mail</label>
+          </div>
+        
+         <div class="c-input">
+            <input type="password" class="c-input__field" />
+            <div class="c-input__bar"></div>
+            <label class="c-input__label">Пароль</label>
+          </div>
+
+          <div class="auth-form__btns">
+            <button class="btn__login">Войти</button>
+            <button class="btn__signup">Регистрация</button>
+            <button class="btn__forgot">Забыли пароль?</button>
+          </div>
+        </form>
+      </div>
+      </section>
       <section class="header__mobile" id="header_mobile">
         <ul class="header__mobile__links">
           <li class="header__mobile__close" id="header__mobile__close">
@@ -195,7 +225,7 @@
                     <img src="img/search.svg" alt="" />
                   </button>
                 </form>
-                <div class="header__layout__top__auth">
+                <div class="header__layout__top__auth" id="btn_auth">
                   <a class="header__layout__top__auth__btn" href="#">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

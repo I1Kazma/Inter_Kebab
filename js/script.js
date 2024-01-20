@@ -12,6 +12,39 @@ header__mobile__close.onclick = () => {
     document.body.classList.remove("nav--opened")
 };
 
+let login_window__close = document.querySelector('#login_window__close');
+let btn_auth = document.querySelector('#btn_auth');
+let login_window = document.querySelector('#login_window')
+
+btn_auth.onclick = () => {
+    login_window.classList.toggle("modal-window--open");
+    document.body.classList.toggle("nav--opened")
+};
+
+login_window__close.onclick = () => {
+    login_window.classList.remove("modal-window--open");
+    document.body.classList.remove("nav--opened")
+};
+
+$(document).ready(function() {
+  
+    var toggleLabel = function(element)  {
+       if (element.val()) {
+        element.addClass('c-input__field--full');
+      } else {
+        element.removeClass('c-input__field--full');
+      }
+    }
+    
+    $('.c-input__field').each(function() {
+      toggleLabel($(this));
+    });
+    
+    $('.c-input__field').on('blur', function() {
+      toggleLabel($(this));
+    });
+  });
+
 const menu = document.querySelector("#food-menu");
 const food_catalog = document.querySelector("#food-catalog")
 window.addEventListener("scroll", function () {
