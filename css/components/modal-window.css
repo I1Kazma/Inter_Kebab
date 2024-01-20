@@ -1,0 +1,52 @@
+.modal-window {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  height: 100vh;
+  width: 100%;
+}
+.modal-window .max-width-wrapper {
+  height: 100%;
+}
+.modal-window .width-wrapper {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.modal-window .width-wrapper .modal-window__background {
+  background: #242424;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  position: absolute;
+}
+.modal-window .width-wrapper .modal-window__layout {
+  margin: 0px 20px;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 20px;
+  background: white;
+  padding: 30px 80px;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__heading .form__heading__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__heading .form__heading__bulochka {
+  display: flex;
+  gap: 20px;
+}/*# sourceMappingURL=modal-window.css.map */

@@ -148,6 +148,112 @@ span {
   }
 }
 
+.counter .plus, .counter .minus {
+  cursor: pointer;
+}
+
+.option {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.option .option-radio {
+  position: relative;
+  gap: 0px;
+}
+.option .option-radio input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+.option .option-radio input:checked + label {
+  border: 2px solid #EF7F1B;
+}
+.option .option-radio label {
+  padding: 9px 20px 12px 20px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  background: #FFF;
+  border: 2px solid #E0E0E0;
+}
+.option .option-radio .choice-img {
+  opacity: 0;
+  transition: 0.3s ease;
+  position: absolute;
+  right: 5px;
+  bottom: 4px;
+}
+
+.price-block {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+.price-block .price {
+  font-size: 40px;
+  color: #24282D;
+  font-weight: 600;
+  line-height: 130%;
+  width: 104px;
+}
+@media (max-width: 1000px) {
+  .price-block .price {
+    font-size: 32px;
+    width: auto;
+  }
+}
+.price-block .weight {
+  color: #AAA;
+  font-weight: 600;
+  line-height: 130%;
+  width: 79px;
+  font-size: 20px;
+}
+@media (max-width: 1000px) {
+  .price-block .weight {
+    font-size: 15px;
+    width: auto;
+  }
+}
+
+.modal-window--open {
+  opacity: 1 !important;
+  z-index: 3 !important;
+}
+
+.more-button__wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.more-button__wrapper .more-button {
+  border-radius: 60px;
+  border: 2px solid #EF7F1B;
+  transition: 0.3s ease;
+  padding: 10px 28px;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.more-button__wrapper .more-button svg path {
+  transition: 0.3s ease;
+}
+.more-button__wrapper .more-button:hover {
+  background: #f29848;
+  border: 2px solid #f29848;
+  color: white;
+}
+.more-button__wrapper .more-button:hover svg path {
+  stroke: white;
+}
+
 .page-header__layout {
   margin: 0px 20px;
   display: flex;
@@ -797,6 +903,286 @@ span {
   height: 16px;
 }
 
+.modal-window {
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s ease;
+  overflow: auto;
+}
+.modal-window .modal-window__background {
+  background: #242424;
+  width: 100%;
+  opacity: 0.3;
+  position: absolute;
+  height: 165%;
+}
+@media (max-width: 1000px) {
+  .modal-window .modal-window__background {
+    height: 250%;
+  }
+}
+.modal-window .max-width-wrapper {
+  height: 100%;
+}
+.modal-window .width-wrapper {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.modal-window .width-wrapper .modal-window__layout {
+  margin: 0px 20px;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__close svg path {
+  transition: 0.3s ease;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__close:hover path {
+  stroke: #f29848;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border-radius: 20px;
+  background: white;
+  padding: 30px 80px;
+  z-index: 4;
+  position: absolute;
+  top: calc(50% - 370px);
+  left: calc(50% - 560px);
+}
+@media (max-width: 1000px) {
+  .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form {
+    padding: 30px 20px;
+    left: 10px;
+    top: 30px;
+  }
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__info span {
+  color: #EF7F1B;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__info .counter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 23px;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__info .counter .count {
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 130%;
+  width: 39px;
+}
+@media (max-width: 1000px) {
+  .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__info .counter .count {
+    font-size: 17px;
+    width: auto;
+  }
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__info .counter .plus {
+  color: black;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__info__description {
+  margin-top: -20px;
+  text-align: center;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__bulochka {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__bulochka h3 {
+  font-size: 17px;
+  color: #AAA;
+  font-weight: 400;
+  line-height: 130%;
+}
+@media (max-width: 480px) {
+  .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__bulochka h3 {
+    font-size: 15px;
+  }
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__delete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .option {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 1000px) {
+  .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .option {
+    gap: 30px;
+  }
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .option .option-radio {
+  position: relative;
+  gap: 0px;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .option .option-radio input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .option .option-radio input:checked + label {
+  border: 2px solid #EF7F1B;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .option .option-radio label {
+  padding: 9px 20px 12px 20px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  background: #FFF;
+  border: 2px solid #E0E0E0;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .option .option-radio .choice-img {
+  opacity: 0;
+  transition: 0.3s ease;
+  position: absolute;
+  right: 5px;
+  bottom: 4px;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  width: 100%;
+  -moz-column-gap: 60px;
+  column-gap: 60px;
+}
+@media (max-width: 950px) {
+  .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items {
+    grid-template-columns: repeat(1, minmax(150px, 450px));
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items {
+    gap: 10px;
+  }
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .more-button, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .more-button, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .more-button, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .more-button {
+  display: none !important;
+}
+@media (max-width: 950px) {
+  .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .more-button, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .more-button, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .more-button, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .more-button {
+    display: flex !important;
+  }
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-ingredients__item, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-sause__item, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-ingredients__item, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-sause__item, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-ingredients__item, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-sause__item, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-ingredients__item, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-sause__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-ingredients__item .price, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-sause__item .price, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-ingredients__item .price, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-sause__item .price, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-ingredients__item .price, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-sause__item .price, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-ingredients__item .price, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-sause__item .price {
+  width: 50px;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-ingredients__item .form__body__wrapper, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-sause__item .form__body__wrapper, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-ingredients__item .form__body__wrapper, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-sause__item .form__body__wrapper, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-ingredients__item .form__body__wrapper, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-sause__item .form__body__wrapper, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-ingredients__item .form__body__wrapper, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-sause__item .form__body__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 480px) {
+  .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-ingredients__item .form__body__wrapper, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-sause__item .form__body__wrapper, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-ingredients__item .form__body__wrapper, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-sause__item .form__body__wrapper, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-ingredients__item .form__body__wrapper, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-sause__item .form__body__wrapper, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-ingredients__item .form__body__wrapper, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-sause__item .form__body__wrapper {
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-ingredients__item img, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-sause__item img, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-ingredients__item img, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-sause__item img, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-ingredients__item img, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-sause__item img, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-ingredients__item img, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-sause__item img {
+  max-width: 40px;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-ingredients__item .counter, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-sause__item .counter, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-ingredients__item .counter, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-sause__item .counter, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-ingredients__item .counter, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-sause__item .counter, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-ingredients__item .counter, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-sause__item .counter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 10px;
+  padding: 6px 10px;
+  border: 1px solid #e0e0e0;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-ingredients__item .counter .minus, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-sause__item .counter .minus, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-ingredients__item .counter .minus, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-sause__item .counter .minus, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-ingredients__item .counter .minus, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-sause__item .counter .minus, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-ingredients__item .counter .minus, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-sause__item .counter .minus {
+  height: 24px;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-ingredients__item .counter .count, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-sause__item .counter .count, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-ingredients__item .counter .count, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-sause__item .counter .count, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-ingredients__item .counter .count, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-sause__item .counter .count, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-ingredients__item .counter .count, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-sause__item .counter .count {
+  color: black;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 130%;
+}
+@media (max-width: 1000px) {
+  .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-ingredients__item .counter .count, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-sause__item .counter .count, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-ingredients__item .counter .count, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-sause__item .counter .count, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-ingredients__item .counter .count, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-sause__item .counter .count, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-ingredients__item .counter .count, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-sause__item .counter .count {
+    font-size: 17px;
+    width: auto;
+  }
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-ingredients__item .counter .plus, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-ingredients__items .form__body__add-sause__item .counter .plus, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-ingredients__item .counter .plus, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-ingredients .form__body__add-sause__items .form__body__add-sause__item .counter .plus, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-ingredients__item .counter .plus, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-ingredients__items .form__body__add-sause__item .counter .plus, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-ingredients__item .counter .plus, .modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__add-sause .form__body__add-sause__items .form__body__add-sause__item .counter .plus {
+  color: black;
+  height: 24px;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .form__body__added {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .price-block {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .price-block .weight {
+  width: 83px;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .price-block .price-block__add {
+  display: flex;
+  gap: 20px;
+  padding: 10px 24px 10px 28px;
+  border-radius: 60px;
+  background: #EF7F1B;
+}
+.modal-window .width-wrapper .modal-window__layout .modal-window__layout__form .form__body .price-block .price-block__add span {
+  color: white;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
 .header .header__mobile-open {
   left: 0px !important;
 }
@@ -1222,6 +1608,159 @@ span {
 .header .header-bottom .header__bottom__layout .header__bottom__layout__right .vk:hover rect {
   fill: #3292ff;
 }
+.header .modal-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .modal-window .modal-window__background {
+  height: 100%;
+}
+.header .modal-window .modal-window__content {
+  margin: 0px 20px;
+  padding: 30px 40px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  z-index: 4;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  background: white;
+  max-width: 453px;
+  width: 100%;
+}
+.header .modal-window .modal-window__content .login-window__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.header .modal-window .modal-window__content .auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.header .modal-window .modal-window__content .auth-form .c-input {
+  position: relative;
+  display: inline-block;
+}
+.header .modal-window .modal-window__content .auth-form .c-input__field {
+  font-size: 17px;
+  padding: 7px 14px 7px 2px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #AAAAAA;
+}
+.header .modal-window .modal-window__content .auth-form .c-input__field:focus {
+  outline: none;
+}
+.header .modal-window .modal-window__content .auth-form .c-input__field:focus ~ .c-input__label {
+  top: -10px;
+  font-size: 12px;
+  color: #EF7F1B;
+  margin-left: 0px;
+}
+.header .modal-window .modal-window__content .auth-form .c-input__field:focus ~ .c-input__bar:before, .header .modal-window .modal-window__content .auth-form .c-input__field:focus ~ .c-input__bar:after {
+  width: 50%;
+}
+.header .modal-window .modal-window__content .auth-form .c-input__field--full ~ .c-input__label {
+  top: -10px;
+  font-size: 12px;
+  color: #EF7F1B;
+  margin-left: 0px;
+}
+.header .modal-window .modal-window__content .auth-form .c-input__field--invalid {
+  border-bottom: 1px solid red;
+}
+.header .modal-window .modal-window__content .auth-form .c-input__field--invalid:focus ~ .c-input__label {
+  color: #EF7F1B;
+}
+.header .modal-window .modal-window__content .auth-form .c-input__field--invalid ~ .c-input__bar:before, .header .modal-window .modal-window__content .auth-form .c-input__field--invalid ~ .c-input__bar:after {
+  color: #EF7F1B;
+}
+.header .modal-window .modal-window__content .auth-form .c-input__bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.header .modal-window .modal-window__content .auth-form .c-input__bar:before, .header .modal-window .modal-window__content .auth-form .c-input__bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #EF7F1B;
+  transition: 0.2s ease all;
+}
+.header .modal-window .modal-window__content .auth-form .c-input__bar:before {
+  left: 50%;
+}
+.header .modal-window .modal-window__content .auth-form .c-input__bar:after {
+  right: 50%;
+}
+.header .modal-window .modal-window__content .auth-form .c-input__label {
+  color: #AAAAAA;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 7px;
+  transition: 0.2s ease all;
+}
+.header .modal-window .modal-window__content .auth-form .auth-form__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+}
+.header .modal-window .modal-window__content .auth-form .auth-form__btns button {
+  transition: 0.3s ease;
+}
+.header .modal-window .modal-window__content .auth-form .auth-form__btns .btn__login {
+  border-radius: 20px;
+  border: 1px solid #EF7F1B;
+  color: white;
+  background: #EF7F1B;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+  padding: 10px 28px;
+}
+.header .modal-window .modal-window__content .auth-form .auth-form__btns .btn__login:hover {
+  background: #f29848;
+  border: 1px solid #f29848;
+  color: white;
+}
+.header .modal-window .modal-window__content .auth-form .auth-form__btns .btn__signup {
+  border-radius: 20px;
+  border: 1px solid #EF7F1B;
+  color: black;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+  padding: 10px 28px;
+}
+.header .modal-window .modal-window__content .auth-form .auth-form__btns .btn__signup:hover {
+  background: #f29848;
+  border: 1px solid #f29848;
+  color: white;
+}
+.header .modal-window .modal-window__content .auth-form .auth-form__btns .btn__forgot {
+  color: #AAAAAA;
+  font-size: 17px;
+  line-height: 130%;
+  text-decoration-line: underline;
+  transition: 0.3s ease;
+}
+.header .modal-window .modal-window__content .auth-form .auth-form__btns .btn__forgot:hover {
+  color: #f29848;
+}
 
 .footer {
   background: #242424;
@@ -1582,37 +2121,6 @@ main {
 }
 .category-items .category-items__layout .category-items__layout__tabs .layout-list .food-element a .food-element__content .food-element__content__info__heading span {
   min-width: 58px;
-}
-.category-items .category-items__layout .category-items__layout__tabs .more-button__wrapper {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.category-items .category-items__layout .category-items__layout__tabs .more-button__wrapper .more-button {
-  border-radius: 60px;
-  border: 2px solid #EF7F1B;
-  transition: 0.3s ease;
-  padding: 10px 28px;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 130%;
-  text-transform: uppercase;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-.category-items .category-items__layout .category-items__layout__tabs .more-button__wrapper .more-button svg path {
-  transition: 0.3s ease;
-}
-.category-items .category-items__layout .category-items__layout__tabs .more-button__wrapper .more-button:hover {
-  background: #f29848;
-  border: 2px solid #f29848;
-  color: white;
-}
-.category-items .category-items__layout .category-items__layout__tabs .more-button__wrapper .more-button:hover svg path {
-  stroke: white;
 }
 
 .sales {
@@ -2143,155 +2651,6 @@ main {
   grid-area: 2/6/3/9;
 }
 
-/*Цвета проекта*/
-/*Шрифт проекта*/
-/*Базовые стили проекта*/
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-  font-family: "Exo 2", sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-a:hover {
-  color: #f29848 !important;
-}
-
-ul, ol {
-  list-style-type: none;
-}
-
-button {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-span {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 130%;
-}
-@media (max-width: 480px) {
-  span {
-    font-size: 15px;
-  }
-}
-
-.notification {
-  position: absolute;
-  top: -10px;
-  right: -5px;
-  border-radius: 22px;
-  background: #EF7F1B;
-  font-size: 15px;
-  font-weight: 700;
-  padding: 3px 7px 3px 6px;
-  color: white;
-}
-
-.whatsapp rect, .vk rect {
-  transition: 0.3s ease;
-}
-
-.whatsapp:hover rect {
-  fill: #6cd37e;
-}
-
-.vk:hover rect {
-  fill: #3292ff;
-}
-
-.nav--opened {
-  overflow-y: hidden;
-}
-
-.swiper-slide {
-  border-radius: 20px;
-}
-
-.swiper-button-prev, .swiper-button-next {
-  height: 70px;
-  width: 71px;
-  color: black;
-  border-radius: 100px;
-  background: white;
-  padding: 20px;
-  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.05));
-  transition: 0.3s ease;
-}
-@media (max-width: 1000px) {
-  .swiper-button-prev, .swiper-button-next {
-    display: none;
-  }
-}
-.swiper-button-prev:hover, .swiper-button-next:hover {
-  background: #f29848;
-  color: white;
-}
-
-.swiper-button-prev {
-  left: var(--swiper-navigation-sides-offset, 0px);
-}
-
-.swiper-button-next {
-  right: var(--swiper-navigation-sides-offset, 0px);
-}
-
-.swiper-button-prev::after, .swiper-button-next::after {
-  font-size: 30px;
-}
-
-.new-item {
-  display: flex;
-  padding: 6px 14px 7px 14px;
-  gap: 10px;
-  border-radius: 50px;
-  background: #98CE52;
-  color: white;
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.max-width-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.max-width-wrapper .width-wrapper {
-  max-width: 1440px;
-  display: flex;
-  width: 100%;
-}
-
-.small-text {
-  font-size: 17px;
-}
-@media (max-width: 480px) {
-  .small-text {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  h2 {
-    font-size: 17px !important;
-  }
-}
-
 .food-catalog {
   overflow: hidden;
 }
@@ -2672,155 +3031,6 @@ span {
 @media (max-width: 480px) {
   .food-item .food-item__layout .food-item__layout__text {
     padding: 20px 10px;
-  }
-}
-
-/*Цвета проекта*/
-/*Шрифт проекта*/
-/*Базовые стили проекта*/
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-  font-family: "Exo 2", sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-a:hover {
-  color: #f29848 !important;
-}
-
-ul, ol {
-  list-style-type: none;
-}
-
-button {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-span {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 130%;
-}
-@media (max-width: 480px) {
-  span {
-    font-size: 15px;
-  }
-}
-
-.notification {
-  position: absolute;
-  top: -10px;
-  right: -5px;
-  border-radius: 22px;
-  background: #EF7F1B;
-  font-size: 15px;
-  font-weight: 700;
-  padding: 3px 7px 3px 6px;
-  color: white;
-}
-
-.whatsapp rect, .vk rect {
-  transition: 0.3s ease;
-}
-
-.whatsapp:hover rect {
-  fill: #6cd37e;
-}
-
-.vk:hover rect {
-  fill: #3292ff;
-}
-
-.nav--opened {
-  overflow-y: hidden;
-}
-
-.swiper-slide {
-  border-radius: 20px;
-}
-
-.swiper-button-prev, .swiper-button-next {
-  height: 70px;
-  width: 71px;
-  color: black;
-  border-radius: 100px;
-  background: white;
-  padding: 20px;
-  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.05));
-  transition: 0.3s ease;
-}
-@media (max-width: 1000px) {
-  .swiper-button-prev, .swiper-button-next {
-    display: none;
-  }
-}
-.swiper-button-prev:hover, .swiper-button-next:hover {
-  background: #f29848;
-  color: white;
-}
-
-.swiper-button-prev {
-  left: var(--swiper-navigation-sides-offset, 0px);
-}
-
-.swiper-button-next {
-  right: var(--swiper-navigation-sides-offset, 0px);
-}
-
-.swiper-button-prev::after, .swiper-button-next::after {
-  font-size: 30px;
-}
-
-.new-item {
-  display: flex;
-  padding: 6px 14px 7px 14px;
-  gap: 10px;
-  border-radius: 50px;
-  background: #98CE52;
-  color: white;
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.max-width-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.max-width-wrapper .width-wrapper {
-  max-width: 1440px;
-  display: flex;
-  width: 100%;
-}
-
-.small-text {
-  font-size: 17px;
-}
-@media (max-width: 480px) {
-  .small-text {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  h2 {
-    font-size: 17px !important;
   }
 }
 

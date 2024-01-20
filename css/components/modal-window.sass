@@ -1,0 +1,261 @@
+
+
+.modal-window
+    position: absolute
+    inset: 0
+
+    height: 100vh
+    width: 100%
+    display: flex
+    z-index: -1
+    opacity: 0
+    transition: 0.3s ease
+    overflow: auto
+
+    .modal-window__background
+        background: #242424
+        width: 100%
+        
+        opacity: 0.3
+        position: absolute
+        height: 165%
+        @include desktop-small
+            height: 250%
+
+    .max-width-wrapper
+        height: 100%
+    .width-wrapper
+        height: 100%
+        justify-content: center
+        align-items: center
+        
+
+        .modal-window__layout
+            margin: 0px 20px
+
+            .modal-window__close
+                position: absolute
+                top: 20px
+                right: 20px
+                cursor: pointer
+
+                svg
+                    path
+                        transition: 0.3s ease
+                &:hover
+                    path
+                        stroke: $orange-hover
+
+            .modal-window__layout__form
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                gap: 30px
+                border-radius: 20px
+                background: white
+                padding: 30px 80px
+                z-index: 4
+
+                position: absolute
+                top: calc(50% - 370px)
+                left: calc(50% - 560px)
+                @include desktop-small
+                    padding: 30px 20px
+                    left: 10px
+                    top: 30px
+
+                .form__body
+                    display: flex
+                    flex-direction: column
+                    gap: 20px
+                    justify-content: center
+                    align-items: center
+
+                    .form__body__info
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        gap: 20px
+
+                        span
+                            color: $orange
+                        .counter
+                            display: flex
+                            align-items: center
+                            gap: 6px
+                            height: 23px
+                            .minus
+
+                            .count
+                                color: black
+                                font-size: 20px
+                                font-weight: 400
+                                line-height: 130%
+                                width: 39px
+
+                                @include desktop-small
+                                    font-size: 17px
+                                    width: auto
+
+                            .plus
+                                color: black
+
+                    .form__body__info__description
+                        margin-top: -20px
+                        text-align: center
+
+                    .form__body__bulochka
+                        display: flex
+                        gap: 10px
+                        align-items: center
+                        h3
+                            font-size: 17px
+                            color: #AAA
+                            font-weight: 400
+                            line-height: 130%
+
+                            @include mobile-big
+                                font-size: 15px
+
+                    .form__body__delete
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: center
+                        gap: 20px
+
+                    .option
+                        display: flex
+                        gap: 20px
+                        flex-wrap: wrap
+                        justify-content: center
+
+                        @include desktop-small
+                            gap: 30px
+
+                        .option-radio
+                            position: relative
+                            gap: 0px
+
+                            input
+                                position: absolute
+                                inset: 0
+                                opacity: 0
+
+                            input:checked+label
+                                border: 2px solid $orange
+
+                            label
+                                padding: 9px 20px 12px 20px
+                                border-radius: 10px
+                                transition: 0.3s ease
+                                background: #FFF
+                                border: 2px solid #E0E0E0
+
+                            .choice-img
+                                opacity: 0
+                                transition: 0.3s ease
+                                position: absolute
+                                right: 5px
+                                bottom: 4px
+
+                    .form__body__add-ingredients, .form__body__add-sause
+                        display: flex
+                        gap: 10px
+                        align-items: center
+                        flex-direction: column
+                        width: 100%
+
+                        .form__body__add-ingredients__items, .form__body__add-sause__items
+                            display: grid
+                            grid-template-columns: repeat(2, minmax(300px, 1fr))
+                            width: 100%
+                            -moz-column-gap: 60px
+                            column-gap: 60px
+                            @media (max-width: 950px)
+                                grid-template-columns: repeat(1, minmax(150px, 450px))
+                                justify-content: center
+                                
+                            @include mobile-big
+                                gap: 10px
+
+                            .more-button
+                                display: none !important
+                                @media (max-width: 950px)
+                                    display: flex !important
+
+                            .form__body__add-ingredients__item, .form__body__add-sause__item
+                                display: flex
+                                align-items: center
+                                gap: 10px
+                                justify-content: space-between
+
+                                .price
+                                    width: 50px
+
+                                .form__body__wrapper
+                                    display: flex
+                                    align-items: center
+                                    gap: 10px
+
+                                    @include mobile-big
+                                        flex-wrap: wrap
+                                        gap: 0px
+
+
+                                img
+                                    max-width: 40px
+
+                                .counter
+                                    display: flex
+                                    align-items: center
+                                    gap: 15px
+
+                                    border-radius: 10px
+                                    padding: 6px 10px
+                                    border: 1px solid #e0e0e0
+                                    .minus
+                                        height: 24px
+
+                                    .count
+                                        color: black
+                                        font-size: 17px
+                                        font-weight: 400
+                                        line-height: 130%
+
+                                        @include desktop-small
+                                            font-size: 17px
+                                            width: auto
+
+                                    .plus
+                                        color: black
+                                        height: 24px
+
+                    .form__body__added
+                        display: flex
+                        flex-direction: column
+                        gap: 20px
+                        justify-content: center
+                        align-items: center
+
+                    .price-block
+                        flex-wrap: wrap
+                        justify-content: center
+                        .weight
+                            width: 83px
+
+                        .price-block__add
+                            display: flex
+                            gap: 20px
+                            padding: 10px 24px 10px 28px
+                            border-radius: 60px
+                            background: $orange
+
+                            span
+                                color: white
+                                font-weight: 600
+                                line-height: 130%
+                                text-transform: uppercase
+                    
+   
