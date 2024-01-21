@@ -25,34 +25,108 @@
   <body>
     <header class="header">
       <section class="modal-window" id="login_window">
-      <div class="modal-window__background">
-      </div>  
-      <div class="modal-window__content">
-        <a href="#" class="login-window__close" id="login_window__close"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-          <path d="M11.75 11.7505L28.2492 28.2496" stroke="#AAAAAA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M11.75 28.2495L28.2492 11.7504" stroke="#AAAAAA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg></a>
-        <h2>Добро пожаловать!</h2>
-        <form action="" class="auth-form">
-          <div class="c-input">
-            <input type="email" class="c-input__field" />
-            <div class="c-input__bar"></div>
-            <label class="c-input__label">Е-Mail</label>
-          </div>
-        
-         <div class="c-input">
-            <input type="password" class="c-input__field" />
-            <div class="c-input__bar"></div>
-            <label class="c-input__label">Пароль</label>
+        <div class="modal-window__background"></div>
+        <div class="modal-window__content">
+          <a href="#" class="modal-window__close" id="login_window__close"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <path
+                d="M11.75 11.7505L28.2492 28.2496"
+                stroke="#AAAAAA"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M11.75 28.2495L28.2492 11.7504"
+                stroke="#AAAAAA"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></a>
+          <form action="" class="auth-form login">
+            <h2>Добро пожаловать!</h2>
+
+            <div class="c-input">
+              <input type="email" class="c-input__field" />
+              <div class="c-input__bar"></div>
+              <label class="c-input__label">Е-Mail</label>
+            </div>
+
+            <div class="c-input">
+              <input type="password" class="c-input__field" />
+              <div class="c-input__bar"></div>
+              <label class="c-input__label">Пароль</label>
+            </div>
+
+            <div class="auth-form__btns">
+              <button type="submit" class="btn__login">Войти</button>
+              <a class="btn__signup" id="link__signup">Регистрация</a>
+              <a class="btn__forgot" id="link__recovery">Забыли пароль?</a>
+            </div>
+          </form>
+
+          <form class="auth-form recovery">
+            <h2>Восстановление пароля</h2>
+            <div class="c-input">
+              <input type="email" class="c-input__field" />
+              <div class="c-input__bar"></div>
+              <label class="c-input__label">Е-Mail</label>
+            </div>
+            <span>Мы отправим код доступа на вашу электронную почту</span>
+            <div class="auth-form__btns login">
+              <button class="btn__login" type="submit" id="btn__recovery">
+                Восстановить пароль
+              </button>
+            </div>
+          </form>
+
+          <div class="recovery__success" id="recovery__success">
+            <img src="img/check-circle.svg" alt="" />
+            <span
+              >Ваша ссылка для восстановления пароля отправлена на вашу
+              почту</span
+            >
           </div>
 
-          <div class="auth-form__btns">
-            <button class="btn__login">Войти</button>
-            <button class="btn__signup">Регистрация</button>
-            <button class="btn__forgot">Забыли пароль?</button>
+          <form class="auth-form signup">
+            <h2>Регистрация</h2>
+            <div class="c-input">
+              <input type="name" class="c-input__field" />
+              <div class="c-input__bar"></div>
+              <label class="c-input__label">Представьтесь, пожалуйста</label>
+            </div>
+            <div class="c-input">
+              <input type="email" class="c-input__field" />
+              <div class="c-input__bar"></div>
+              <label class="c-input__label">Е-Mail</label>
+            </div>
+            <div class="c-input">
+              <input type="password" class="c-input__field" />
+              <div class="c-input__bar"></div>
+              <label class="c-input__label">Пароль</label>
+            </div>
+
+            <div class="auth-form__btns login">
+              <button class="btn__login" id="btn__registration" type="submit">
+                Регистрация
+              </button>
+            </div>
+          </form>
+
+          <div class="signup__success" id="signup__success">
+            <img src="img/check-circle.svg" alt="" />
+            <h3>Спасибо!</h3>
+            <span>Вы успешно зарегистрированы </span>
+            <a class="btn__login" id="back_to_login">Войти</a>
           </div>
-        </form>
-      </div>
+        </div>
       </section>
       <section class="header__mobile" id="header_mobile">
         <ul class="header__mobile__links">
@@ -257,8 +331,20 @@
                   <a href="#" class="header__layout__top__busket__wrapper">
                     <img src="img/cart.svg" alt="" />
                   </a>
-
                   <div class="notification">4</div>
+
+                  <div class="header__layout__top__busket__items">
+                    <div class="header__layout__top__busket__items__wrapper">
+                      <div class="header__layout__top__busket__items__content">
+                        <h3>В корзине пусто.</h3>
+                        <span>Добвыьте блюдо из меню прямо сейчас</span>
+                      </div>
+
+                      <a href="/Inter_Kebab-main/catalog.html" class="btn__link"
+                        >Перейти в меню</a
+                      >
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -278,6 +364,22 @@
                 <div class="header__bottom__layout__time">
                   <h3>Калининград</h3>
                   <span>Пн-Вс 09:00-21:00</span>
+                </div>
+                <div class="header__bottom__layout__location__more">
+                  <ul class="header__bottom__layout__location__more__items">
+                    <li class="header__bottom__layout__location__more__item">
+                      <a href="">Тельмана 48в</a>
+                    </li>
+                    <li class="header__bottom__layout__location__more__item">
+                      <a href="">Советский пр-т 159 (ТЦ Гранд)</a>
+                    </li>
+                    <li class="header__bottom__layout__location__more__item">
+                      <a href="">Киевская 71а</a>
+                    </li>
+                    <li class="header__bottom__layout__location__more__item">
+                      <a href="">Клиническая 77</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div class="header__bottom__layout__right">
@@ -2407,6 +2509,61 @@
     </main>
     <footer class="footer">
       <div class="max-width-wrapper">
+        <div class="modal-window" id="vacancies__window">
+          <div class="modal-window__background"></div>
+          <div class="modal-window__content">
+            <a href="#" class="modal-window__close" id="vacancies_window__close"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+              >
+                <path
+                  d="M11.75 11.7505L28.2492 28.2496"
+                  stroke="#AAAAAA"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.75 28.2495L28.2492 11.7504"
+                  stroke="#AAAAAA"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+            ></a>
+            <h2>Приглашаем на работу</h2>
+            <span
+              >Ждём от вас резюме на почту
+              <a href="mailto: inter.kebab@bk.ru">inter.kebab@bk.ru</a></span
+            >
+            <div class="modal-window__content__text">
+              <div class="vacancy">
+                <h3>Бариста</h3>
+                <span>Обязанности</span>
+                <ul>
+                  <li>Общаться с гостями, принимать заказы, работа с кассой</li>
+                  <li>Готовить вкусные напитки</li>
+                  <li>Поддерживать порядок и чистоту</li>
+                  <li>Помогать повару</li>
+                </ul>
+              </div>
+              <div class="vacancy">
+                <h3>Повар</h3>
+                <span>Обязанности</span>
+                <ul >
+                  <li>Общаться с гостями, принимать заказы, работа с кассой</li>
+                  <li>Готовить вкуснейшие шаверму и бургеры</li>
+                  <li>Поддерживать порядок и чистоту на кухне</li>
+                  <li>Умение готовить напитки приветствуется</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="width-wrapper">
           <div class="footer__layout">
             <img src="img/logo.svg" class="footer__layout__logo" alt="" />
@@ -2416,7 +2573,7 @@
                 <li><a href="#">О нас</a></li>
                 <li><a href="#">Контакты</a></li>
                 <li><a href="#">Отзывы</a></li>
-                <li><a href="#">Вакансии</a></li>
+                <li><a href="#" id="vacancies__modal">Вакансии</a></li>
               </ul>
               <div class="footer__layout__social">
                 <div class="footer__layout__right__phone">

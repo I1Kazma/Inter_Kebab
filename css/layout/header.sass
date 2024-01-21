@@ -1,4 +1,6 @@
 @import '../utils/utils'
+@import '../base/style'
+
 .header
 
     .header__mobile-open
@@ -261,6 +263,13 @@
 
             .header__layout__top__busket
                 position: relative
+                
+                &:hover 
+                    .header__layout__top__busket__items
+                        opacity: 1
+                        z-index:3
+
+
 
                 .header__layout__top__busket__wrapper
                     padding: 12px 24px 12px 20px
@@ -275,6 +284,48 @@
 
                     @include mobile-big
                         padding: 12px 10px
+
+                .header__layout__top__busket__items
+                    padding-top:20px
+                    position: absolute
+                    right: 0px
+                    z-index: -1
+                    opacity: 0
+                    transition: 0.3s ease
+                    width: 454px
+
+                    .header__layout__top__busket__items__wrapper
+                        background: $white
+                        padding: 30px
+                        border-radius: 20px
+                        display: flex
+                        flex-direction: column
+                        gap: 20px
+                        align-items: center
+
+                        .header__layout__top__busket__items__content
+                            display: flex
+                            flex-direction: column
+                            gap: 5px
+                            align-items: center
+
+                        .btn__link
+                            border-radius: 20px
+                            border: 1px solid $orange
+                            color: white
+                            background: $orange
+                            font-size: 17px
+                            font-weight: 600
+                            line-height: 130%
+                            text-transform: uppercase
+                            padding: 10px 28px
+                            cursor: pointer
+
+                            &:hover
+                                background: $orange-hover
+                                border: 1px solid $orange-hover
+                                color: white !important
+
 
     .header-bottom
         padding-top: 18px
@@ -291,10 +342,15 @@
                 display: Flex
                 gap: 30px
                 align-items: Center
-
+                position: relative
                 font-size: 17px
                 font-weight: 400
                 line-height: 130%
+
+                &:hover .header__bottom__layout__location__more
+                    opacity: 1 !important
+                    z-index: 3 !important
+                    color: $orange-hover
 
                 @media (max-width: 700px)
                     gap: 14px
@@ -303,6 +359,10 @@
                     display: flex
                     align-items: center
                     gap: 6px
+                    cursor: pointer
+                    transition: 0.3s ease
+                    &:hover
+                        color: $orange-hover
 
                     span
                         @media (max-width: 700px)
@@ -319,6 +379,38 @@
                             display: flex
                             width: 45px
                             height: 38px
+
+                .header__bottom__layout__location__more
+                    opacity: 0
+                    z-index: -1
+                    transition: 0.3s ease
+                    position: absolute
+                    top: 45px
+                    z-index: 3
+                    padding: 30px 40px 40px 40px
+                    border-radius: 0px 20px 20px 20px
+                    background: #FFF
+                    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.04)
+
+
+                    @include tablet
+                        padding: 20px
+
+                    .header__bottom__layout__location__more__items
+                        display: flex
+                        flex-direction: column
+                        gap: 5px
+
+                        a
+                            color: #AAA
+                            font-size: 17px
+                            font-weight: 500
+                            line-height: normal
+                            text-decoration-line: underline
+                            transition: 0.3s ease
+
+                            &:hover
+                                color: $orange-hover
 
                 .header__bottom__layout__time
                     display: flex
@@ -376,153 +468,4 @@
                 .vk:hover rect
                     fill: #3292ff
 
-    .modal-window
-        display: flex
-        justify-content: center
-        align-items: center
-
-        .modal-window__background
-            height: 100%
-        .modal-window__content
-            margin: 0px 20px
-            padding: 30px 40px
-            flex-direction: column
-            justify-content: center
-            gap: 20px
-            position: relative
-            z-index: 4
-            display: flex
-            border-radius: 20px
-            align-items: center
-            background: $white
-            max-width: 453px
-            width: 100%
-
-            .login-window__close
-                position: absolute
-                right: 20px
-                top: 20px
-            .auth-form
-                display: flex
-                flex-direction: column
-                gap: 10px
-                width: 100%
-
-                .c-input
-                    position: relative
-                    display: inline-block
-
-                    &__field
-                        font-size: 17px
-                        padding: 7px 14px 7px 2px
-                        display: block
-                        width: 100%
-                        border: none
-                        border-bottom: 1px solid #AAAAAA
-
-                        &:focus
-                            outline: none
-
-                            &~ .c-input__label
-                                top: -10px
-                                font-size: 12px
-                                color: $orange
-                                margin-left: 0px
-
-                            &~ .c-input__bar:before, &~ .c-input__bar:after
-                                width: 50%
-
-                        &--full ~ .c-input__label
-                            top: -10px
-                            font-size: 12px
-                            color: $orange
-                            margin-left: 0px
-
-                        &--invalid
-                            border-bottom: 1px solid red
-
-                            &:focus ~ .c-input__label
-                                color: $orange
-
-                            &~ .c-input__bar:before, &~ .c-input__bar:after
-                                color: $orange
-
-                    &__bar
-                        position: relative
-                        display: block
-                        width: 100%
-
-                        &:before, &:after
-                            content: ''
-                            height: 2px
-                            width: 0
-                            bottom: 0
-                            position: absolute
-                            background: $orange
-                            transition: 0.2s ease all
-
-                        &:before
-                            left: 50%
-
-                        &:after
-                            right: 50%
-
-                    &__label
-                        color: #AAAAAA
-                        font-size: 18px
-                        font-weight: normal
-                        position: absolute
-                        pointer-events: none
-                        left: 5px
-                        top: 7px
-                        transition: 0.2s ease all
-
-                .auth-form__btns
-                    display: flex
-                    flex-direction: column
-                    gap: 10px
-                    padding-top: 10px
-
-                    button
-                        transition: 0.3s ease
-
-                    .btn__login
-                        border-radius: 20px
-                        border: 1px solid $orange
-                        color: white
-                        background: $orange
-                        font-size: 17px
-                        font-weight: 600
-                        line-height: 130%
-                        text-transform: uppercase
-                        padding: 10px 28px
-
-                        &:hover
-                            background: $orange-hover
-                            border: 1px solid $orange-hover
-                            color: white
-
-                    .btn__signup
-                        border-radius: 20px
-                        border: 1px solid $orange
-                        color: black
-                        font-size: 17px
-                        font-weight: 600
-                        line-height: 130%
-                        text-transform: uppercase
-                        padding: 10px 28px
-
-                        &:hover
-                            background: $orange-hover
-                            border: 1px solid $orange-hover
-                            color: white
-
-                    .btn__forgot
-                        color: #AAAAAA
-                        font-size: 17px
-                        line-height: 130%
-                        text-decoration-line: underline
-                        transition: 0.3s ease
-
-                        &:hover
-                            color: $orange-hover
+    

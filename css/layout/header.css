@@ -31,6 +31,17 @@ button {
   cursor: pointer;
 }
 
+span {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 130%;
+}
+@media (max-width: 480px) {
+  span {
+    font-size: 15px;
+  }
+}
+
 .notification {
   position: absolute;
   top: -10px;
@@ -120,6 +131,322 @@ button {
   max-width: 1440px;
   display: flex;
   width: 100%;
+}
+
+.small-text {
+  font-size: 17px;
+}
+@media (max-width: 480px) {
+  .small-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 17px !important;
+  }
+}
+
+.counter .plus, .counter .minus {
+  cursor: pointer;
+}
+
+.option {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.option .option-radio {
+  position: relative;
+  gap: 0px;
+}
+.option .option-radio input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+.option .option-radio input:checked + label {
+  border: 2px solid #EF7F1B;
+}
+.option .option-radio label {
+  padding: 9px 20px 12px 20px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  background: #FFF;
+  border: 2px solid #E0E0E0;
+}
+.option .option-radio .choice-img {
+  opacity: 0;
+  transition: 0.3s ease;
+  position: absolute;
+  right: 5px;
+  bottom: 4px;
+}
+
+.price-block {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+.price-block .price {
+  font-size: 40px;
+  color: #24282D;
+  font-weight: 600;
+  line-height: 130%;
+  width: 104px;
+}
+@media (max-width: 1000px) {
+  .price-block .price {
+    font-size: 32px;
+    width: auto;
+  }
+}
+.price-block .weight {
+  color: #AAA;
+  font-weight: 600;
+  line-height: 130%;
+  width: 79px;
+  font-size: 20px;
+}
+@media (max-width: 1000px) {
+  .price-block .weight {
+    font-size: 15px;
+    width: auto;
+  }
+}
+
+.modal-window--open {
+  opacity: 1 !important;
+  z-index: 11 !important;
+}
+
+.more-button__wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.more-button__wrapper .more-button {
+  border-radius: 60px;
+  border: 2px solid #EF7F1B;
+  transition: 0.3s ease;
+  padding: 10px 28px;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.more-button__wrapper .more-button svg path {
+  transition: 0.3s ease;
+}
+.more-button__wrapper .more-button:hover {
+  background: #f29848;
+  border: 2px solid #f29848;
+  color: white;
+}
+.more-button__wrapper .more-button:hover svg path {
+  stroke: white;
+}
+
+.recovery, .signup, .recovery__success, .signup__success {
+  display: none;
+}
+
+.login {
+  display: flex;
+}
+
+.recovery__success, .signup__success {
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.recovery__success .btn__login, .signup__success .btn__login {
+  border-radius: 20px;
+  border: 1px solid #EF7F1B;
+  color: white;
+  background: #EF7F1B;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+  padding: 10px 28px;
+  cursor: pointer;
+}
+.recovery__success .btn__login:hover, .signup__success .btn__login:hover {
+  background: #f29848;
+  border: 1px solid #f29848;
+  color: white !important;
+}
+.recovery__success span, .signup__success span {
+  text-align: center;
+}
+
+.modal-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-window .modal-window__background {
+  height: 100%;
+}
+.modal-window .modal-window__content {
+  margin: 0px 20px;
+  padding: 30px 40px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  z-index: 4;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  background: white;
+  max-width: 453px;
+  width: 100%;
+}
+.modal-window .modal-window__content .login-window__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.modal-window .modal-window__content .auth-form {
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.modal-window .modal-window__content .auth-form h2 {
+  text-align: center;
+}
+.modal-window .modal-window__content .auth-form .c-input {
+  position: relative;
+  display: inline-block;
+}
+.modal-window .modal-window__content .auth-form .c-input__field {
+  font-size: 17px;
+  padding: 7px 14px 7px 2px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #AAAAAA;
+}
+.modal-window .modal-window__content .auth-form .c-input__field:focus {
+  outline: none;
+}
+.modal-window .modal-window__content .auth-form .c-input__field:focus ~ .c-input__label {
+  top: -10px;
+  font-size: 12px;
+  color: #EF7F1B;
+  margin-left: 0px;
+}
+.modal-window .modal-window__content .auth-form .c-input__field:focus ~ .c-input__bar:before, .modal-window .modal-window__content .auth-form .c-input__field:focus ~ .c-input__bar:after {
+  width: 50%;
+}
+.modal-window .modal-window__content .auth-form .c-input__field--full ~ .c-input__label {
+  top: -10px;
+  font-size: 12px;
+  color: #EF7F1B;
+  margin-left: 0px;
+}
+.modal-window .modal-window__content .auth-form .c-input__field--invalid {
+  border-bottom: 1px solid red;
+}
+.modal-window .modal-window__content .auth-form .c-input__field--invalid:focus ~ .c-input__label {
+  color: #EF7F1B;
+}
+.modal-window .modal-window__content .auth-form .c-input__field--invalid ~ .c-input__bar:before, .modal-window .modal-window__content .auth-form .c-input__field--invalid ~ .c-input__bar:after {
+  color: #EF7F1B;
+}
+.modal-window .modal-window__content .auth-form .c-input__bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.modal-window .modal-window__content .auth-form .c-input__bar:before, .modal-window .modal-window__content .auth-form .c-input__bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #EF7F1B;
+  transition: 0.2s ease all;
+}
+.modal-window .modal-window__content .auth-form .c-input__bar:before {
+  left: 50%;
+}
+.modal-window .modal-window__content .auth-form .c-input__bar:after {
+  right: 50%;
+}
+.modal-window .modal-window__content .auth-form .c-input__label {
+  color: #AAAAAA;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 7px;
+  transition: 0.2s ease all;
+}
+.modal-window .modal-window__content .auth-form .auth-form__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+}
+.modal-window .modal-window__content .auth-form .auth-form__btns button, .modal-window .modal-window__content .auth-form .auth-form__btns a {
+  transition: 0.3s ease;
+}
+.modal-window .modal-window__content .auth-form .auth-form__btns .btn__login {
+  border-radius: 20px;
+  border: 1px solid #EF7F1B;
+  color: white;
+  background: #EF7F1B;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+  padding: 10px 28px;
+}
+.modal-window .modal-window__content .auth-form .auth-form__btns .btn__login:hover {
+  background: #f29848;
+  border: 1px solid #f29848;
+  color: white;
+}
+.modal-window .modal-window__content .auth-form .auth-form__btns .btn__signup {
+  border-radius: 20px;
+  border: 1px solid #EF7F1B;
+  color: black;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+  padding: 10px 28px;
+  text-align: center;
+  cursor: pointer;
+}
+.modal-window .modal-window__content .auth-form .auth-form__btns .btn__signup:hover {
+  background: #f29848;
+  border: 1px solid #f29848;
+  color: white !important;
+}
+.modal-window .modal-window__content .auth-form .auth-form__btns .btn__forgot {
+  color: #AAAAAA;
+  font-size: 17px;
+  line-height: 130%;
+  text-decoration-line: underline;
+  transition: 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+.modal-window .modal-window__content .auth-form .auth-form__btns .btn__forgot:hover {
+  color: #f29848;
 }
 
 .header .header__mobile-open {
@@ -420,6 +747,10 @@ button {
 .header .header-top .header__layout__top__right .header__layout__top__busket {
   position: relative;
 }
+.header .header-top .header__layout__top__right .header__layout__top__busket:hover .header__layout__top__busket__items {
+  opacity: 1;
+  z-index: 3;
+}
 .header .header-top .header__layout__top__right .header__layout__top__busket .header__layout__top__busket__wrapper {
   padding: 12px 24px 12px 20px;
   border-radius: 10px;
@@ -436,6 +767,47 @@ button {
     padding: 12px 10px;
   }
 }
+.header .header-top .header__layout__top__right .header__layout__top__busket .header__layout__top__busket__items {
+  padding-top: 20px;
+  position: absolute;
+  right: 0px;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s ease;
+  width: 454px;
+}
+.header .header-top .header__layout__top__right .header__layout__top__busket .header__layout__top__busket__items .header__layout__top__busket__items__wrapper {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.header .header-top .header__layout__top__right .header__layout__top__busket .header__layout__top__busket__items .header__layout__top__busket__items__wrapper .header__layout__top__busket__items__content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+.header .header-top .header__layout__top__right .header__layout__top__busket .header__layout__top__busket__items .header__layout__top__busket__items__wrapper .btn__link {
+  border-radius: 20px;
+  border: 1px solid #EF7F1B;
+  color: white;
+  background: #EF7F1B;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+  padding: 10px 28px;
+  cursor: pointer;
+}
+.header .header-top .header__layout__top__right .header__layout__top__busket .header__layout__top__busket__items .header__layout__top__busket__items__wrapper .btn__link:hover {
+  background: #f29848;
+  border: 1px solid #f29848;
+  color: white !important;
+}
 .header .header-bottom {
   padding-top: 18px;
   padding-bottom: 30px;
@@ -451,9 +823,15 @@ button {
   display: Flex;
   gap: 30px;
   align-items: Center;
+  position: relative;
   font-size: 17px;
   font-weight: 400;
   line-height: 130%;
+}
+.header .header-bottom .header__bottom__layout .header__bottom__layout__left:hover .header__bottom__layout__location__more {
+  opacity: 1 !important;
+  z-index: 3 !important;
+  color: #f29848;
 }
 @media (max-width: 700px) {
   .header .header-bottom .header__bottom__layout .header__bottom__layout__left {
@@ -464,6 +842,11 @@ button {
   display: flex;
   align-items: center;
   gap: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.header .header-bottom .header__bottom__layout .header__bottom__layout__left .header__bottom__layout__location:hover {
+  color: #f29848;
 }
 @media (max-width: 700px) {
   .header .header-bottom .header__bottom__layout .header__bottom__layout__left .header__bottom__layout__location span {
@@ -484,6 +867,39 @@ button {
     width: 45px;
     height: 38px;
   }
+}
+.header .header-bottom .header__bottom__layout .header__bottom__layout__left .header__bottom__layout__location__more {
+  opacity: 0;
+  z-index: -1;
+  transition: 0.3s ease;
+  position: absolute;
+  top: 45px;
+  z-index: 3;
+  padding: 30px 40px 40px 40px;
+  border-radius: 0px 20px 20px 20px;
+  background: #FFF;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.04);
+}
+@media (max-width: 768px) {
+  .header .header-bottom .header__bottom__layout .header__bottom__layout__left .header__bottom__layout__location__more {
+    padding: 20px;
+  }
+}
+.header .header-bottom .header__bottom__layout .header__bottom__layout__left .header__bottom__layout__location__more .header__bottom__layout__location__more__items {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.header .header-bottom .header__bottom__layout .header__bottom__layout__left .header__bottom__layout__location__more .header__bottom__layout__location__more__items a {
+  color: #AAA;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+  transition: 0.3s ease;
+}
+.header .header-bottom .header__bottom__layout .header__bottom__layout__left .header__bottom__layout__location__more .header__bottom__layout__location__more__items a:hover {
+  color: #f29848;
 }
 .header .header-bottom .header__bottom__layout .header__bottom__layout__left .header__bottom__layout__time {
   display: flex;
