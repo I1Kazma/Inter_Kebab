@@ -1,0 +1,467 @@
+@import '../utils/utils'
+@import '../base/style'
+
+.header
+
+    .header__mobile-open
+        left: 0px !important
+
+    .header__mobile
+        display: none
+
+        @include desktop-small
+            display: flex
+            flex-direction: column
+            position: absolute
+            background: $white
+            left: -1000px
+            width: 100%
+            height: 100%
+            z-index: 5
+            transition: 0.3s ease
+
+        .header__mobile__close
+            width: 48px
+            height: 48px
+            margin-bottom: 20px
+            cursor: pointer
+
+            path
+                transition: 0.3s ease
+
+            &:hover path
+                fill: $orange-hover
+
+        ul
+            width: 100%
+            height: 100%
+            padding: 20px 30px
+
+            @include tablet
+                padding: 20px 20px
+
+            .header__mobile__wrapper__link
+                border-top: 1px solid grey
+                border-bottom: 1px solid grey
+                display: flex
+                margin-top: -1px
+
+                &:hover a
+                    color: $orange-hover
+
+                a
+                    padding: 20px 20px
+                    color: $black
+                    transition: 0.3s ease
+                    font-size: 17px
+                    text-transform: uppercase
+                    font-weight: 600
+                    line-height: 130%
+
+            .header__mobile__social-links
+                display: flex
+                gap: 10px
+                padding: 20px 20px
+    .header-top
+        background: black
+        width: 100%
+        display: Flex
+        padding-top: 14px
+
+        .header__top__layout
+            margin: 0px 20px
+            display: flex
+            justify-content: space-between
+            max-height: 66px
+            width: 100%
+            position: relative
+
+        .header__layout__top__links
+            display: flex
+            gap: 20px
+
+            @include desktop-small
+                gap: 10px
+                width: 100%
+                max-width: 270px
+
+            .hamburger
+                display: none !important
+                &:hover a
+                    background: #323232
+
+                @include desktop-small
+                    display: flex !important
+
+                a
+                    transition: 0.3s ease
+                    @include desktop-small
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        padding: 12px 20px
+                        background: #383838
+                        border-radius: 10px
+                        height: 48px
+
+                    @include mobile-big
+                        padding: 12px 10px
+
+            .link
+                @include desktop-small
+                    display: none !important
+
+            .menu__hamburger
+                @include desktop-small
+                    display: none
+
+            .header__layout__top__link.menu
+                a
+                    background: #FAFAFA
+                    color: black
+                    gap: 10px
+                    padding: 18px 28px 18px 24px
+                    border-radius: 10px 10px 0px 0px
+
+                    @include desktop-small
+                        padding: 15px 24px
+                        border-radius: 10px
+                        height: 48px
+
+                    span
+                        @include mobile-big
+                            font-size: 15px
+
+            .header__layout__top__link
+                display: Flex
+
+                a
+
+                    @include flex-center
+                    color: white
+                    text-transform: uppercase
+
+                    font-size: 17px
+                    font-weight: 600
+                    line-height: 130%
+                    transition: 0.3s ease
+
+                    &:hover
+                        color: $orange-hover
+
+                    path
+                        transition: 0.3s ease
+
+                    &:hover path
+                        stroke: $orange-hover
+
+        .header__logo
+            position: relative
+            top: 6px
+            width: 128px
+            height: 106px
+
+            @include desktop-small
+                width: 110px
+                height: 92px
+
+            @include tablet
+                width: 108.87px
+                height: 93.246px
+
+            @media (max-width: 700px)
+                display: None
+
+        .header__layout__top__right
+            display: flex
+            justify-content: space-between
+            gap: 10px
+            padding-bottom: 16px
+
+            .header__layout__top__search
+                display: flex
+                width: 296px
+
+                @media (max-width: 1275px)
+                    width: 100%
+
+                @include desktop-small
+                    &:hover input
+                        top: 48px
+                        max-height: 50px
+                        overflow: visible
+                        padding-top: 50px
+
+                .header__layout__top__search__wrapper
+
+                    @include desktop-small
+                        display: none
+
+                    input
+                        border-radius: 10px 0px 0px 10px
+                        border: 2px solid #383838
+                        background: $black
+                        padding: 10px
+                        outline: none
+                        transition: 0.3s ease
+                        color: white
+                        width: 100%
+                        height: 100%
+
+                        font-size: 17px
+                        font-weight: 400
+                        line-height: 130%
+
+                        &:focus
+                            background: #323232
+
+                        @include desktop-small
+                            position: absolute
+                            border-radius: 10px 10px 10px 10px
+                            left: 0
+                            max-height: 0px
+                            overflow: hidden
+
+                button
+                    transition: 0.3s ease
+                    border-radius: 0px 10px 10px 0px
+                    background: #383838
+                    padding: 12px 20px
+
+                    @include desktop-small
+                        border-radius: 10px 10px 10px 10px
+
+                    @include mobile-big
+                        padding: 12px
+
+            .header__layout__top__auth
+
+                .header__layout__top__auth__btn
+                    border-radius: 10px
+                    padding: 12px 24px 12px 20px
+                    display: flex
+                    gap: 6px
+                    background: #383838
+                    transition: 0.3s ease
+                    height: 100%
+                    align-items: center
+
+                    &:hover
+                        background: #323232
+
+                    @include tablet
+                        padding: 12px 20px
+
+                    @include mobile-big
+                        padding: 12px 10px
+
+                    span
+                        color: white
+
+                        @include tablet
+                            display: none
+
+            .header__layout__top__busket
+                position: relative
+
+                &:hover
+                    .header__layout__top__busket__items
+                        opacity: 1
+                        z-index: 3
+
+                .header__layout__top__busket__wrapper
+                    padding: 12px 24px 12px 20px
+                    border-radius: 10px
+                    height: 100%
+                    background: #383838
+                    display: flex
+                    transition: 0.3s ease
+
+                    &:hover
+                        background: #323232
+
+                    @include mobile-big
+                        padding: 12px 10px
+
+                .header__layout__top__busket__items
+                    padding-top: 20px
+                    position: absolute
+                    right: 0px
+                    z-index: -1
+                    opacity: 0
+                    transition: 0.3s ease
+                    width: 454px
+
+                    .header__layout__top__busket__items__wrapper
+                        background: $white
+                        padding: 30px
+                        border-radius: 20px
+                        display: flex
+                        flex-direction: column
+                        gap: 20px
+                        align-items: center
+
+                        .header__layout__top__busket__items__content
+                            display: flex
+                            flex-direction: column
+                            gap: 5px
+                            align-items: center
+
+                        .btn__link
+                            border-radius: 20px
+                            border: 1px solid $orange
+                            color: white
+                            background: $orange
+                            font-size: 17px
+                            font-weight: 600
+                            line-height: 130%
+                            text-transform: uppercase
+                            padding: 10px 28px
+                            cursor: pointer
+
+                            &:hover
+                                background: $orange-hover
+                                border: 1px solid $orange-hover
+                                color: white !important
+
+    .header-bottom
+        padding-top: 18px
+        padding-bottom: 30px
+        background: #FAFAFA
+
+        .header__bottom__layout
+            margin: 0px 20px
+            display: flex
+            width: 100%
+            justify-content: space-between
+
+            .header__bottom__layout__left
+                display: Flex
+                gap: 30px
+                align-items: Center
+                position: relative
+                font-size: 17px
+                font-weight: 400
+                line-height: 130%
+                overflow: hidden
+
+                &:hover
+                    overflow: visible
+                    .header__bottom__layout__location__more
+                        opacity: 1 !important
+                        z-index: 3 !important
+                        color: $orange-hover
+
+                @media (max-width: 700px)
+                    gap: 14px
+
+                .header__bottom__layout__location
+                    display: flex
+                    align-items: center
+                    gap: 6px
+                    cursor: pointer
+                    transition: 0.3s ease
+                    &:hover
+                        color: $orange-hover
+
+                    span
+                        @media (max-width: 700px)
+                            display: none
+
+                    .location
+                        @media (max-width: 700px)
+                            display: none
+
+                    .location-logo
+                        display: none
+                        @media (max-width: 700px)
+                            display: flex
+                            width: 45px
+                            height: 38px
+
+                .header__bottom__layout__location__more
+                    opacity: 0
+                    z-index: -1
+                    transition: 0.3s ease
+                    position: absolute
+                    top: 45px
+                    z-index: 3
+                    padding: 30px 40px 40px 40px
+                    border-radius: 0px 20px 20px 20px
+                    background: #FFF
+                    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.04)
+
+                    @include tablet
+                        padding: 20px
+
+                    .header__bottom__layout__location__more__items
+                        display: flex
+                        flex-direction: column
+                        gap: 5px
+
+                        a
+                            color: #AAA
+                            font-size: 17px
+                            font-weight: 500
+                            line-height: normal
+                            text-decoration-line: underline
+                            transition: 0.3s ease
+
+                            &:hover
+                                color: $orange-hover
+
+                .header__bottom__layout__time
+                    display: flex
+                    flex-direction: column
+
+                    h3
+                        display: none
+                        @media (max-width: 700px)
+                            display: flex
+                            font-size: 15px
+                            font-weight: 400
+
+                    span
+                        @media (max-width: 700px)
+                            font-size: 10px
+                            font-style: normal
+                            font-weight: 400
+
+            .header__bottom__layout__right
+                display: flex
+                gap: 10px
+                align-items: center
+
+                .header__bottom__layout__phone
+
+                    a
+                        font-size: 24px
+                        font-style: normal
+                        font-weight: 600
+                        line-height: 130%
+                        transition: 0.3s ease
+                        color: black
+
+                        @include tablet
+                            font-size: 20px
+
+                        @include mobile-big
+                            font-size: 15px
+
+                    &:hover a
+                        color: $orange-hover
+
+                .whatsapp, .vk
+                    rect
+                        transition: 0.3s ease
+
+                .whatsapp,
+                .vk
+                    @media (max-width: 420px)
+                        display: none
+
+                .whatsapp:hover rect
+                    fill: #6cd37e
+
+                .vk:hover rect
+                    fill: #3292ff

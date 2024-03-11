@@ -1,0 +1,152 @@
+
+.footer
+    background: #242424
+
+    .footer__layout
+        display: flex
+        width: 100%
+        flex-direction: column
+        position: relative
+        padding: 49px 0px 40px
+        margin: 0px 20px
+        align-items: center
+
+        .footer__layout__logo
+            position: absolute
+            top: -60px
+            z-index: 2
+
+            @include desktop-small
+                width: 110px
+                height: 92px
+
+        .footer__layout__info
+            display: flex
+            justify-content: space-between
+            width: 100%
+            padding-bottom: 35px
+
+            ul
+                display: flex
+                gap: 20px
+
+                @include desktop-small
+                    max-width: 312px
+                    flex-wrap: wrap
+
+                @media (max-width: 580px)
+                    flex-direction: column
+
+                a
+                    font-size: 20px
+                    color: white
+                    font-weight: 600
+                    line-height: 130%
+                    text-transform: uppercase
+
+                    @include desktop-small
+                        font-size: 15px
+
+            .footer__layout__social
+                display: flex
+                gap: 10px
+                align-items: center
+
+                @include desktop-small
+                    flex-direction: column
+                    align-items: flex-end
+
+                .footer__layout__right__phone
+                    a
+                        color: white
+                        font-size: 24px
+                        font-weight: 600
+                        line-height: 130%
+
+                        @include mobile-big
+                            font-size: 17px
+
+                .social-links
+                    display: flex
+                    gap: 10px
+
+        .footer__layout__menu
+            padding: 20px 10px
+            border-top: 1px solid #AAA
+            width: 100%
+            border-bottom: 1px solid #AAA
+            ul
+                display: flex
+                gap: 40px
+                justify-content: center
+                flex-wrap: wrap
+
+                @include desktop-small
+                    gap: 20px
+
+                li
+
+                    a
+                        font-size: 17px
+                        font-style: normal
+                        font-weight: 600
+                        color: #FFF
+                        text-transform: uppercase
+
+                        @include desktop-small
+                            font-size: 15px
+
+        .footer__layout__copyright
+            display: flex
+            justify-content: space-between
+            width: 100%
+            padding-top: 30px
+
+            @include mobile-big
+                flex-direction: column-reverse
+                gap: 20px
+
+            span, a
+                color: white
+
+            span
+                @include mobile-big
+                    text-align: center
+
+            a
+                text-decoration: underline
+
+            a:hover
+                color: $orange-hover
+
+    .modal-window
+
+        .modal-window__content
+            align-items: baseline
+            max-width: 690px
+
+            h2
+                text-transform: uppercase
+
+            .vacancy
+                padding: 0px 30px
+
+                @include tablet
+                    padding: 0px 15px
+
+                h3
+                    font-size: 24px
+                    font-weight: 600
+                    line-height: 130%
+
+                span
+                    font-size: 17px
+                    color: #aaa
+                    font-weight: 600
+                    line-height: 130%
+
+                ul
+                    padding: 20px
+                    list-style-type: disc
+                    li
+                        font-size: 17px
