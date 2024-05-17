@@ -10,22 +10,22 @@
       href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script
       src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=9128308a-c750-4f20-8e96-b73f043dfadb"
       type="text/javascript"
     ></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="css/main.css" />
 
-    <title>Контакты</title>
+    <title>Корзина</title>
   </head>
   <body>
     <header class="header">
@@ -451,6 +451,7 @@
         </div>
       </section>
     </header>
+
     <main class="main">
       <section class="page-header">
         <div class="max-width-wrapper">
@@ -458,118 +459,592 @@
             <div class="page-header__layout">
               <div class="page-header__layout__breadcrumb">
                 <a href="#" class="page-header__layout__breadcrumb__prev"
-                  >Главная /
+                  >Главная / </a
+                ><a href="#" class="page-header__layout__breadcrumb__current"
+                  >Корзина
                 </a>
-                <a href="#" class="page-header__layout__breadcrumb__current"
-                  >Контакты</a
-                >
               </div>
               <div class="page-header__layout__title">
-                <h1>Контакты</h1>
+                <h1>Корзина</h1>
+                <div class="page-header__layout__text">
+                  <span> Приём заказов: ПН-ВС с 09:00 до 21:00 </span>
+                  <span> На заказы от 1 500 ₽ бесплатная доставка</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="busket">
         <div class="max-width-wrapper">
           <div class="width-wrapper">
-            <div class="contacts__layout">
-              <ul class="contacts__layout__shops">
-                <li class="contacts__layout__shop">
-                  <div class="contacts__layout__shop__wrapper">
-                    <div class="contacts__layout__shop__content">
-                      <h2>Тельмана 48в</h2>
-                      <span>Пн-Вс 09:00–21:00</span>
-                      <a href="tel:+79525804030" class="number"
-                        >+7 952 580-40-30</a
+            <form class="busket__layout" action="">
+              <div class="busket__layout__order">
+                <ul class="busket__layout__order__items">
+                  <li class="busket__layout__order__item">
+                    <button class="delete">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 40 40"
+                        fill="none"
                       >
-                      <a
-                        target="_blank"
-                        href="https://yandex.ru/maps/-/CDqHBBMJ"
-                        class="show-map"
-                        >показать на карте</a
-                      >
-                      <a
-                        target="_blank"
-                        href="https://yandex.ru/maps/22/kaliningrad/?ll=20.525229%2C54.736385&mode=routes&rtext=~54.736384%2C20.525229&rtt=mt&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNDQyMDYzNjQxEkfQoNC-0YHRgdC40Y8sINCa0LDQu9C40L3QuNC90LPRgNCw0LQsINGD0LvQuNGG0LAg0KLQtdC70YzQvNCw0L3QsCwgNDjQkSIKDaszpEEVDvJaQg%2C%2C&z=17"
-                        class="show-way"
-                        >Проложить маршрут</a
-                      >
+                        <path
+                          d="M11.75 11.7505L28.2492 28.2496"
+                          stroke="#E0E0E0"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.75 28.2495L28.2492 11.7504"
+                          stroke="#E0E0E0"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                    <img src="img/shaverma.png" alt="" />
+                    <div class="busket__layout__order__item__content">
+                      <div class="busket__layout__order__item__content__text">
+                        <h4>Шаверма карри с курицей <b>600 гр.</b></h4>
+                        <span
+                          >Шаверма с курицей, беконом, грибами, маринованными
+                          огурчиками, помидор, соусом терияки и свежей
+                          капустой</span
+                        >
+                        <span><a href="#">Изменить состав</a></span>
+                      </div>
+                      <div class="busket__layout__order__item__content__price">
+                        <span class="price">530 ₽</span>
+                        <div class="counter">
+                          <div class="minus">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M5 12H19"
+                                stroke="#E0E0E0"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                          <span class="count">1 шт</span>
+                          <div class="plus">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M12 5V19"
+                                stroke="#242424"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M5 12H19"
+                                stroke="#242424"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <img src="img/shop-1.png" alt="" />
-                </li>
-                <li class="contacts__layout__shop">
-                  <div class="contacts__layout__shop__wrapper">
-                    <div class="contacts__layout__shop__content">
-                      <h2>Киевская 71а</h2>
-                      <span>Пн-Вс 09:00–21:00</span>
-                      <a href="tel:+79525804030" class="number"
-                        >+7 952 580-40-30</a
+                  </li>
+                  <li class="busket__layout__order__item">
+                    <button class="delete">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 40 40"
+                        fill="none"
                       >
-                      <a
-                        href="https://yandex.ru/maps/-/CDqHBFJk"
-                        class="show-map"
-                        >показать на карте</a
-                      >
-                      <a
-                        href="https://yandex.ru/maps/22/kaliningrad/?ll=20.482837%2C54.681462&mode=routes&rtext=~54.681461%2C20.482837&rtt=mt&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo1MzE4NDQ2NjA2EkfQoNC-0YHRgdC40Y8sINCa0LDQu9C40L3QuNC90LPRgNCw0LQsINCa0LjQtdCy0YHQutCw0Y8g0YPQu9C40YbQsCwgNzHQkCIKDdnco0EV0blaQg%2C%2C&z=17"
-                        class="show-way"
-                        >Проложить маршрут</a
-                      >
+                        <path
+                          d="M11.75 11.7505L28.2492 28.2496"
+                          stroke="#E0E0E0"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.75 28.2495L28.2492 11.7504"
+                          stroke="#E0E0E0"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                    <img src="img/shaverma.png" alt="" />
+                    <div class="busket__layout__order__item__content">
+                      <div class="busket__layout__order__item__content__text">
+                        <h4>Шаверма карри с курицей <b>600 гр.</b></h4>
+                        <span
+                          >Шаверма с курицей, беконом, грибами, маринованными
+                          огурчиками, помидор, соусом терияки и свежей
+                          капустой</span
+                        >
+                        <span><a href="#">Изменить состав</a></span>
+                      </div>
+                      <div class="busket__layout__order__item__content__price">
+                        <span class="price">530 ₽</span>
+                        <div class="counter">
+                          <div class="minus">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M5 12H19"
+                                stroke="#E0E0E0"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                          <span class="count">1 шт</span>
+                          <div class="plus">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M12 5V19"
+                                stroke="#242424"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M5 12H19"
+                                stroke="#242424"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <img src="img/shop-2.png" alt="" />
-                </li>
-                <li class="contacts__layout__shop">
-                  <div class="contacts__layout__shop__wrapper">
-                    <div class="contacts__layout__shop__content">
-                      <h2>Советский пр-т 159</h2>
-                      <span>Пн-Вс 09:00–21:00</span>
-                      <a href="tel:+79525804030" class="number"
-                        >+7 952 580-40-30</a
+                  </li>
+                  <li class="busket__layout__order__item">
+                    <button class="delete">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 40 40"
+                        fill="none"
                       >
-                      <a
-                        href="https://yandex.ru/maps/-/CDqHBF2n"
-                        class="show-map"
-                        >показать на карте</a
-                      >
-                      <a
-                        href="https://yandex.ru/maps/22/kaliningrad/?ll=20.465401%2C54.742699&mode=routes&rtext=~54.742699%2C20.465401&rtt=mt&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjIzMTA4NRJO0KDQvtGB0YHQuNGPLCDQmtCw0LvQuNC90LjQvdCz0YDQsNC0LCDQodC-0LLQtdGC0YHQutC40Lkg0L_RgNC-0YHQv9C10LrRgiwgMTU5IgoNJLmjQRWG-FpC&z=17"
-                        class="show-way"
-                        >Проложить маршрут</a
-                      >
+                        <path
+                          d="M11.75 11.7505L28.2492 28.2496"
+                          stroke="#E0E0E0"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.75 28.2495L28.2492 11.7504"
+                          stroke="#E0E0E0"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                    <img src="img/shaverma.png" alt="" />
+                    <div class="busket__layout__order__item__content">
+                      <div class="busket__layout__order__item__content__text">
+                        <h4>Шаверма карри с курицей <b>600 гр.</b></h4>
+                        <span
+                          >Шаверма с курицей, беконом, грибами, маринованными
+                          огурчиками, помидор, соусом терияки и свежей
+                          капустой</span
+                        >
+                        <span><a href="#">Изменить состав</a></span>
+                      </div>
+                      <div class="busket__layout__order__item__content__price">
+                        <span class="price">530 ₽</span>
+                        <div class="counter">
+                          <div class="minus">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M5 12H19"
+                                stroke="#E0E0E0"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                          <span class="count">1 шт</span>
+                          <div class="plus">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M12 5V19"
+                                stroke="#242424"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M5 12H19"
+                                stroke="#242424"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <img src="img/shop-3.png" alt="" />
-                </li>
-                <li class="contacts__layout__shop">
-                  <div class="contacts__layout__shop__wrapper">
-                    <div class="contacts__layout__shop__content">
-                      <h2>Клиническая 77</h2>
-                      <span>Пн-Вс 09:00–21:00</span>
-                      <a href="tel:+79525804030" class="number"
-                        >+7 952 580-40-30</a
+                  </li>
+                  <li class="busket__layout__order__item">
+                    <button class="delete">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 40 40"
+                        fill="none"
                       >
-                      <a
-                        href="https://yandex.ru/maps/-/CDqHBJmL"
-                        class="show-map"
-                        >показать на карте</a
-                      >
-                      <a
-                        href="https://yandex.ru/maps/22/kaliningrad/?ll=20.521106%2C54.717792&mode=routes&rtext=~54.717792%2C20.521105&rtt=mt&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgozNDk2ODkxMTI1EkvQoNC-0YHRgdC40Y8sINCa0LDQu9C40L3QuNC90LPRgNCw0LQsINCa0LvQuNC90LjRh9C10YHQutCw0Y8g0YPQu9C40YbQsCwgNzciCg06K6RBFQTfWkI%2C&z=17"
-                        class="show-way"
-                        >Проложить маршрут</a
-                      >
+                        <path
+                          d="M11.75 11.7505L28.2492 28.2496"
+                          stroke="#E0E0E0"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.75 28.2495L28.2492 11.7504"
+                          stroke="#E0E0E0"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                    <img src="img/shaverma.png" alt="" />
+                    <div class="busket__layout__order__item__content">
+                      <div class="busket__layout__order__item__content__text">
+                        <h4>Шаверма карри с курицей <b>600 гр.</b></h4>
+                        <span
+                          >Шаверма с курицей, беконом, грибами, маринованными
+                          огурчиками, помидор, соусом терияки и свежей
+                          капустой</span
+                        >
+                        <span><a href="#">Изменить состав</a></span>
+                      </div>
+                      <div class="busket__layout__order__item__content__price">
+                        <span class="price">530 ₽</span>
+                        <div class="counter">
+                          <div class="minus">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M5 12H19"
+                                stroke="#E0E0E0"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                          <span class="count">1 шт</span>
+                          <div class="plus">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M12 5V19"
+                                stroke="#242424"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M5 12H19"
+                                stroke="#242424"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </li>
+                </ul>
+                <aside class="busket__layout__order__price">
+                  <div class="busket__layout__order__price__item price-text">
+                    <span class="price-info">4 товара на сумму:</span>
+                    <span class="price-value">1 695 ₽</span>
                   </div>
-                  <img src="img/shop-4.png" alt="" />
-                </li>
-              </ul>
-              <div class="contacts__layout__map" id="map"></div>
-            </div>
+                  <div class="busket__layout__order__price__item price-text">
+                    <span class="price-info">Доставка:</span>
+                    <span class="price-value">0 ₽</span>
+                  </div>
+                  <div class="busket__layout__order__price__item notice">
+                    <span
+                      >*Стоимость доставки зависит от вашего
+                      местоположения</span
+                    >
+                  </div>
+                  <div class="busket__layout__order__price__item total">
+                    <span class="price-info">Итого:</span>
+                    <span class="price-value">1 695 ₽</span>
+                  </div>
+                </aside>
+              </div>
+              <div class="busket__layout__info">
+                <h2>Способ доставки</h2>
+                <div class="busket__layout__info__layout">
+                  <div class="busket__layout__info__address">
+                    <ul class="busket__layout__info__address__head">
+                      <li class="busket__layout__info__address__head__item">
+                        <input type="radio" name="time" value="standart" />
+                        <label for="standart">Стандартная доставка</label>
+                      </li>
+                      <li
+                        class="busket__layout__info__address__head__item active"
+                      >
+                        <input type="radio" name="time" value="for__time" />
+                        <label for="for__time">К определённому времени</label>
+                      </li>
+                      <li class="busket__layout__info__address__head__item">
+                        <input type="radio" name="time" value="pickup" />
+                        <label for="pickup">Самовывоз</label>
+                      </li>
+                    </ul>
+
+                    <ul class="busket__layout__info__address__content">
+                      <li class="busket__layout__info__address__content__item">
+                        <h3>Доставка курьером (стандартная)</h3>
+
+                        <div
+                          class="busket__layout__info__address__content__item__info"
+                        >
+                          <div
+                            class="busket__layout__info__address__content__item__info__inputs"
+                          >
+                            <div
+                              class="busket__layout__info__address__content__item__info__inputs__left"
+                            >
+                              <div class="c-input">
+                                <input type="text" class="c-input__field" />
+                                <div class="c-input__bar"></div>
+                                <label class="c-input__label">Улица, дом</label>
+                              </div>
+                              <div class="c-input">
+                                <input type="text" class="c-input__field" />
+                                <div class="c-input__bar"></div>
+                                <label class="c-input__label">Подъезд</label>
+                              </div>
+                              <div class="c-input">
+                                <input type="text" class="c-input__field" />
+                                <div class="c-input__bar"></div>
+                                <label class="c-input__label">Этаж</label>
+                              </div>
+                              <div class="c-input">
+                                <input type="text" class="c-input__field" />
+                                <div class="c-input__bar"></div>
+                                <label class="c-input__label">Кв/офис</label>
+                              </div>
+                            </div>
+                            <div
+                              class="busket__layout__info__address__content__item__info__inputs__right"
+                            >
+                              <textarea
+                                name=""
+                                id=""
+                                placeholder="Комментарий курьеру"
+                              ></textarea>
+                            </div>
+                          </div>
+                        </div>
+
+                        <span
+                          >Сделайте заказ и получите его в течение 60 минут
+                          по указанному вами адресу</span
+                        >
+                        <span style="color: #aaa">
+                          Время доставки может быть изменено В случае изменения
+                          времени доставки наш оператор обязательно сообщит
+                          информацию при заказе</span
+                        >
+                        <span>Стоимость доставки: <b>0 ₽</b></span>
+                      </li>
+                      <li
+                        class="busket__layout__info__address__content__item active"
+                      >
+                        <h3>Доставка курьером (к определенному времени)</h3>
+
+                        <div
+                          class="busket__layout__info__address__content__item__info"
+                        >
+                          <div
+                            class="busket__layout__info__address__content__item__info__inputs"
+                          >
+                            <div
+                              class="busket__layout__info__address__content__item__info__inputs__left"
+                            >
+                              <div class="c-input">
+                                <input type="text" class="c-input__field" />
+                                <div class="c-input__bar"></div>
+                                <label class="c-input__label">Улица, дом</label>
+                              </div>
+                              <div class="c-input">
+                                <input type="text" class="c-input__field" />
+                                <div class="c-input__bar"></div>
+                                <label class="c-input__label">Подъезд</label>
+                              </div>
+                              <div class="c-input">
+                                <input type="text" class="c-input__field" />
+                                <div class="c-input__bar"></div>
+                                <label class="c-input__label">Этаж</label>
+                              </div>
+                              <div class="c-input">
+                                <input type="text" class="c-input__field" />
+                                <div class="c-input__bar"></div>
+                                <label class="c-input__label">Кв/офис</label>
+                              </div>
+                              <div class="c-input">
+                                <input type="date" class="c-input__field" />
+                                <div class="c-input__bar"></div>
+                                <label class="c-input__label"
+                                  >Выберите дату</label
+                                >
+                              </div>
+                              <div class="c-input">
+                                <input type="time" class="c-input__field" />
+                                <div class="c-input__bar"></div>
+                                <label class="c-input__label"
+                                  >Выберите время</label
+                                >
+                              </div>
+                            </div>
+                            <div
+                              class="busket__layout__info__address__content__item__info__inputs__right"
+                            >
+                              <textarea
+                                name=""
+                                id=""
+                                placeholder="Комментарий курьеру"
+                              ></textarea>
+                            </div>
+                          </div>
+                        </div>
+
+                        <span
+                          >Укажите дату и время, к которому вы хотите получить
+                          заказ, и мы доставим его точно в указанный срок. Заказ
+                          ко времени необходимо оформить не позднее,
+                          чем за 2 часа до желаемого времени получения</span
+                        >
+                        <span style="color: #aaa">
+                          Время доставки может быть изменено В случае изменения
+                          времени доставки наш оператор обязательно сообщит
+                          информацию при заказе</span
+                        >
+                        <span>Стоимость доставки: <b>0 ₽</b></span>
+                      </li>
+                      <li class="busket__layout__info__address__content__item">
+                        3
+                      </li>
+                    </ul>
+                  </div>
+                  <aside class="busket__layout__info__contacts">
+                    <div class="busket__layout__info__contacts__form">
+                      <div class="busket__layout__info__contacts__form__inputs">
+                        <h3>Форма заказа</h3>
+                        <div class="c-input">
+                          <input type="name" class="c-input__field" />
+                          <div class="c-input__bar"></div>
+                          <label class="c-input__label"
+                            >Представьтесь, пожалуйста</label
+                          >
+                        </div>
+                        <div class="c-input">
+                          <input type="email" class="c-input__field" />
+                          <div class="c-input__bar"></div>
+                          <label class="c-input__label">E-Mail</label>
+                        </div>
+                        <div class="c-input">
+                          <input type="phone" class="c-input__field" />
+                          <div class="c-input__bar"></div>
+                          <label class="c-input__label">Телефон</label>
+                        </div>
+                        <div class="input">
+                          <input type="checkbox" />
+                          <label
+                            >Я согласен (на) на обработку персональных
+                            данных</label
+                          >
+                        </div>
+                      </div>
+                      <div class="busket__layout__info__contacts__form__final">
+                        <span>Итоговая сумма к оплате: <b>1 695 ₽</b></span>
+                        <button class="orange-btn" type="submit">
+                          Оформить заказ
+                        </button>
+                      </div>
+                    </div>
+                    <span>
+                      Приобретайте электронные подарочные сертификаты, радуйте
+                      своих любимых и близких!
+                    </span>
+                  </aside>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -727,6 +1202,6 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
-    <script src="js/map.js"></script>
+    <script src="js/busket.js"></script>
   </body>
 </html>
